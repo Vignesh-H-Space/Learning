@@ -7,7 +7,7 @@
 
 Secret_Number = 56
 for i in range (1,11):
-    n = int(input("Enter a number between 1 to 100 "))
+    n = int(input("Enter a number between 1 to 100 \n"))
     if(n>100 or n <1):
         print("The number you have entered is not falling under 1 to 100. Kindly enter the number between the interval 1 to 100")
     elif(n>Secret_Number):
@@ -18,7 +18,7 @@ for i in range (1,11):
         print(f"Your guess is correct")
         break
 if (Secret_Number == n):
-    print(f"You have guessed the number {Secret_Number} in {i+1} attempts")
+    print(f"You have guessed the number {Secret_Number} in {i} attempts")
 else :
-    print("You have exceeded all your attempts")    
+    print("\n You have exceeded all your attempts")    
         
