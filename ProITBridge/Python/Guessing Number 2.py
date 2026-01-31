@@ -1,3 +1,6 @@
+# Guessing Number 
+# For Loop (7 Iterations )
+
 Secret_Number = 56
 for i in range (0,7):
     n = int(input("Enter a number between 1 to 100 "))
