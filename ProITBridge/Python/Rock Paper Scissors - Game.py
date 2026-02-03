@@ -17,4 +17,17 @@ Instructions:
 4.Ask if the player wants to play again- if yes, repeat; if no, exit.
 5.Handle invalid inputs gracefully using try-except or condition checks. '''
 
-
+import random
+print ("Welcome to Rock Paper Scissors Game")
+list = ["rock","paper","scissors"]
+while True : 
+    user_selection = input("Enter your choice: ")
+    try : 
+        if (user_selection not in list):
+            print("Select proper choice")
+        else :
+            if (user_selection == "rock"):
+            
+        
+    except ValueError:
+        print ("Enter proper value")
