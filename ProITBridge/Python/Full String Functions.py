@@ -116,3 +116,66 @@ print(" ".join(word1))
 
 word2 = ["03", "02", "2026"]
 print("-".join(word2))
+
+#### isalnum - returns true if string is alpha numeric else false
+s = "Mango121"
+print(s.isalnum())
+
+s = "Mango/121"
+print(s.isalnum())
+
+#### isalpha - returns true if string is alpha else false
+s = "Mango"
+print(s.isalpha())
+
+s = "Mango121"
+print(s.isalpha())
+
+#### isdecimal - returns true if string is decimal else false
+s = "202.64"
+print(s.isdecimal())
+
+s = "121"
+print(s.isdecimal())
+
+#### isdigit - returns true if string is digit else false
+s = "202.64"
+print(s.isdigit())
+
+s = "121"
+print(s.isdigit())
+
+#### Islower - returns true if entire string is lower else false 
+word1 = "avengers infinity WAR"
+print(word1.islower()) 
+
+word2 = "thor ragnarok"
+print(word2.islower())
+
+#### Isupper - returns true if entire string is upper else false 
+word1 = "avengers infinity WAR"
+print(word1.isupper()) 
+
+word2 = "THOR"
+print(word2.isupper())
+
+#### lstrip - remove space in left 
+word1 = "        avengers infinity WAR   "
+print(word1.lstrip()) 
+
+word2 = "       THOR  "
+print(word2.lstrip()) 
+
+#### rstrip - remove space in right 
+word1 = "        avengers infinity WAR     "
+print(word1.rstrip()) 
+
+word2 = "       THOR    "
+print(word2.rstrip()) 
+
+#### strip - remove space in left and right 
+word1 = "        avengers infinity WAR     "
+print(word1.strip()) 
+
+word2 = "       THOR    "
+print(word2.strip()) 
