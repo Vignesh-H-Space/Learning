@@ -54,3 +54,65 @@ string10 = "Movie"
 string10 = string10.index("e")
 print(string10)
 
+#### Upper - Converts all the characters to upper case 
+word1 = "Multiplex"
+print(word1.upper()) 
+
+word2 = "Doctor Strange"
+print(word2.upper())
+
+#### Lower - Converts all the characters to lower case 
+word1 = "MULTIPLEX"
+print(word1.lower()) 
+
+word2 = "Doctor Strange"
+print(word2.lower())
+
+#### Title - Converts the first letter of every word to uppercase 
+word1 = "avengers infinity WAR"
+print(word1.title()) 
+
+word2 = "THOR ragnarok"
+print(word2.title())
+
+#### Swapcase - Swaps all the cases of all letters, i.e., Lower letters becomes upper and upper letters becomes lower. 
+word1 = "avengers infinity WAR"
+print(word1.swapcase()) 
+
+word2 = "THOR ragnarok"
+print(word2.swapcase())
+
+#### Startswith - Returns true when the string starts with else returns false 
+word1 = "avengers infinity WAR"
+print(word1.startswith("av")) 
+
+word2 = "THOR ragnarok"
+print(word2.startswith("ok"))
+
+#### Endswith - Returns true when the string ends with else returns false 
+word1 = "avengers infinity WAR"
+print(word1.endswith("ar")) 
+
+word2 = "THOR ragnarok"
+print(word2.endswith("ok"))
+
+#### Replace - Replaces a substring with another substring 
+word1 = "avengers infinity WAR"
+print(word1.replace("infinity","Star")) 
+
+word2 = "THOR ragnarok"
+print(word2.replace("ragnarok","Thunder"))
+
+#### Split - Split the string into list 
+word1 = "avengers infinity WAR"
+print(word1.split()) 
+
+word2 = "THOR ragnarok"
+print(word2.split())
+
+#### Join - Joins the list into a single string with given 
+word1 = ["Avengers", "End", "Game"]
+print(" ".join(word1)) 
+
+word2 = ["03", "02", "2026"]
+print("-".join(word2))
