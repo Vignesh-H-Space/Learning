@@ -22,33 +22,43 @@ print ("Welcome to Rock Paper Scissors Game")
 print("Select one among the following : rock, paper, scissors")
 options = ["rock","paper","scissors"]
 to_continue = 'N'
-user_selection = input("Enter your choice: ")
-while (to_continue.lower) == 'q':
+while (to_continue.lower()) != 'q':
     try : 
+        user_selection = input("Enter your choice(rock/paper/scissors): ").lower()
         if (user_selection not in options):
-            print("Select proper choice ")
+            raise ValueError ("Select proper choice ")
+        
         else :
             computer_selection = random.choice(options)
+            print(f"Computer chose: {computer_selection}")
             if(computer_selection == user_selection):
                 print("The battle is drawn ")
+            
             elif (user_selection == "rock"):
                 if (computer_selection == "paper"):
                     print("User has lost ")
+                    
                 else :
                     print("User won ")
+                    
             elif (user_selection == "paper"):
                 if (computer_selection == "scissors"):
                     print("User has lost ")
+                    
                 else :
                     print("User won ")
+                    
             else :
-                 if (computer_selection == "scissors"):
+                 if (computer_selection == "rock"):
                     print("User has lost ")
+                   
                  else :
                     print("User won ")
+                 
         
     except ValueError:
         print ("Enter proper value (rock,paper,scissors) with proper spelling ")
         
-print("Do you want to continue ? ")
-to_continue = input("If no, enter Q. If yes, enter anything else ")    
+            
+    print("Do you want to continue ? ")
+    to_continue = input("If no, enter Q. If yes, enter anything else ")    
