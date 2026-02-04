@@ -1,4 +1,4 @@
-### String Functions 
+### String Functions - Each function with 2 examples
 
 #### Capitalize - Only the first letter of entire string and convert others letters into lower
 string1 = "caPTain America"
