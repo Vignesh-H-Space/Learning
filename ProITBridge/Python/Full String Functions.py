@@ -177,5 +177,5 @@ print(word2.rstrip())
 word1 = "        avengers infinity WAR     "
 print(word1.strip()) 
 
-word2 = "       THOR    "
+word2 = "     THOR    "
 print(word2.strip()) 
