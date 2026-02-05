@@ -24,14 +24,18 @@ word = random.choice(word_list)
 length = len(word)
 print("Welcome to Word Guessing Game ")
 print("You have 6 attemtps to guess the entire word ")
-computer_word = ["_"] * length
+print (f"Hint : The length of the word is {length}")
+computer_word = "_" * length
 print (computer_word)
 for i in range (0,6):
     try : 
-        letter = input("Enter your first guess: ").lower()
+        letter = input(f"Enter your {i+1} guess: ").lower()
         if len(letter) > 1 : 
-            raise ValueError("Incorrect Input !!! ")
-        
-    
+            raise ValueError()
+        else :
+            for i in range (0,length):
+                if word[i] == 'letter' :
+                    computer_word[i] = letter 
+        print(computer_word)
     except ValueError:
         print ("Enter only one letter at a time")
