@@ -1,12 +1,13 @@
-''' 1.while loop 
+''' 
+1.while loop 
 2.for loop
- 3.if else
- 4.if elif else
- 5.user defined functions without for loop, if loop 
+3.if else
+4.if elif else
+5.user defined functions without for loop, if loop 
 6.user defined functions with for loop 
 7.user defined functions with for loop and if condition 
 8.break
- 9.continue 
+9.continue 
 10.for loop with in operator
 11.for loop with if statement
 12.for loop with not in operator
@@ -39,3 +40,17 @@ for i in range(1, 100):
   word = input("Enter q to quit and any other letter to continue: ")
   if word.lower() == 'q':
      break
+ 
+ # if else 1
+number = 2 
+if number % 2 == 0 :
+    print("Number is even")
+else :
+    print("Number is odd")
+
+# if else 2
+word = "IRON MAN"
+if word.isupper() == True : 
+    print("The word is in upper case ")
+else :
+    print ("The word is in lower case ")
