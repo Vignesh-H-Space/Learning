@@ -39,3 +39,4 @@ for i in range (0,6):
         print(" ".join(computer_word))
     except ValueError:
         print ("Enter only one letter at a time")
+print(f"Game over !!! \n The correct word is {word}")
