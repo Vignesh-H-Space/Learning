@@ -54,3 +54,83 @@ if word.isupper() == True :
     print("The word is in upper case ")
 else :
     print ("The word is in lower case ")
+    
+# if elif 
+marks = int(input("Enter marks: "))
+
+if marks >= 90:
+    print("Grade A")
+elif marks >= 75:
+    print("Grade B")
+elif marks >= 50:
+    print("Grade C")
+else:
+    print("Fail")
+
+
+# User-defined function without for loop, if loop
+def greet():
+    print("Hello, welcome ")
+
+greet()
+
+# User-defined function with for loop
+def print_numbers():
+    for i in range(1, 6):
+        print(i)
+
+print_numbers()
+
+# User-defined function with for loop and if condition
+def even_numbers():
+    for i in range(1, 11):
+        if i % 2 == 0:
+            print(i)
+
+even_numbers()
+
+# break
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+
+# Continue
+for i in range(1, 10):
+    if i == 5:
+        continue
+    print(i)
+
+# for loop with in operator
+name = "PYTHON"
+
+for letter in name:
+    print(letter)
+
+# for loop with if statement 
+for i in range(1, 11):
+    if i > 5:
+        print(i)
+
+# for loop with not in operator 
+word = "python"
+
+for letter in "aeiou":
+    if letter not in word:
+        print(letter, "not in word")
+
+# if with in operator 
+text = "learning python"
+
+if "python" in text:
+    print("Python found")
+else:
+    print("Python not found")
+
+# if with not in operator 
+username = "admin"
+
+if "@" not in username:
+    print("Invalid username")
+else:
+    print("Valid username")
