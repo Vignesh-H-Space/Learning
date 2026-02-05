@@ -26,7 +26,7 @@ print("Welcome to Word Guessing Game ")
 print("You have 6 attemtps to guess the entire word ")
 print (f"Hint : The length of the word is {length}")
 computer_word = ["_"] * length
-print ("".join(computer_word))
+print (" ".join(computer_word))
 for i in range (0,6):
     try : 
         letter = input(f"Enter your {i+1} guess: ").lower()
@@ -36,6 +36,6 @@ for i in range (0,6):
             for i in range (0,length):
                 if word[i] == letter :
                     computer_word[i] = letter 
-        print("".join(computer_word))
+        print(" ".join(computer_word))
     except ValueError:
         print ("Enter only one letter at a time")
