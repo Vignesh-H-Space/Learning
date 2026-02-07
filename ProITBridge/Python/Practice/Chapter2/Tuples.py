@@ -1,6 +1,6 @@
 # Tuples in Python
 
-tuple1 = ()  # Empty List
+tuple1 = ()  # Empty Tuple
 print(tuple1)
 
 print(type(tuple1))
