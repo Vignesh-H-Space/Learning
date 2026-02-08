@@ -64,4 +64,70 @@ items_to_buy = ["Apple","Pomogranate","Orange","Apple",12,78,91.1]
 # items_to_buy.sort() ERROR - Since sorting cant happen with different datatypes
 items_to_buy2 = ["Apple","Pomogranate","Orange","Apple"]
 items_to_buy2.sort() 
-print(items_to_buy2) 
+print(items_to_buy2)
+
+
+# Tuple Functions 
+
+items_to_buy = ("Apple","Pomogranate","Orange","Apple",12,78,91.1)
+print(items_to_buy.count("Apple"))  # Count - Count the number of occurences of the element in tuple 
+
+
+items_to_buy = ("Apple","Pomogranate","Orange","Apple",12,78,91.1)
+print(items_to_buy.index("Apple"))  # Index - Returns the index, returns only first index if duplicate exists
+
+
+# Set functions 
+
+items_to_buy = set(("Apple","Pomogranate","Orange","Apple",12,78,91.1))
+
+items_to_buy.add("Banana")   # Add - Adds element to set (no duplicates allowed)
+print(items_to_buy)
+
+items_to_buy.remove("Apple")  # Remove - Removes specified element (Error if element not found)
+print(items_to_buy)
+
+# items_to_buy.remove("Mango")  # ERROR - Element not present
+
+items_to_buy.discard("Orange")  # Discard - Removes element if present (No error if not found)
+print(items_to_buy)
+
+items_to_buy.pop()  # Pop - Removes a random element from the set
+print(items_to_buy)
+
+items_to_buy.clear()  # Clear - Removes all elements from the set
+print(items_to_buy)
+
+
+# Dictionary Functions
+
+
+student = {
+    "name": "Asad",
+    "age": 21,
+    "course": "Python"
+}
+
+print(student.get("name"))   # Get - Returns value of the key
+print(student.get("marks"))   # Returns None if key doesn't exist
+
+student["age"] = 22  # Update value using key
+print(student)
+
+student.update({"marks": 95})  # Update - Adds new key-value pair
+print(student)
+
+print(student.keys())  # Keys - Returns all keys
+
+print(student.values())  # Values - Returns all values
+
+print(student.items())  # Items - Returns key-value pairs as tuples
+
+student.pop("course")  # Pop - Removes specified key
+print(student)
+
+student.popitem()  # Popitem - Removes last inserted key-value pair
+print(student)
+
+student.clear()  # Clear - Removes all elements from dictionary
+print(student)
