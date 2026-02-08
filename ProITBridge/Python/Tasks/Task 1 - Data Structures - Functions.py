@@ -3,7 +3,7 @@
 # List, Tuple, Set, Dictionary - One example for each functions 
 
 
-# List 
+# List Functions
 
 items_to_buy = ["Apple","Pomogranate","Orange","Apple",12,78,91.1]
 
