@@ -6,4 +6,3 @@ import pandas as pd
 
 pd.read_csv(filepath_or_buffer= "data.tsv.txt",sep = "\t")
 
-pd.read_table(filepath_or_buffer= "data.tsv.txt")
