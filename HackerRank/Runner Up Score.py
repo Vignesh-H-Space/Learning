@@ -17,8 +17,11 @@
 n = int(input())
 large = 0
 arr = map(int, input().split())
-for i in range (0,n):
-        j = i + 1 
+for element in arr:
+        if (element>large):
+            num = large
+            large = element
         
-        
-            
+# print (large) The largest number 
+
+print (num) # Second largest number 
