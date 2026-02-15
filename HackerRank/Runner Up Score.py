@@ -15,4 +15,10 @@
 # Output - 5 
 
 n = int(input())
+large = 0
 arr = map(int, input().split())
+for i in range (0,n):
+        j = i + 1 
+        
+        
+            
