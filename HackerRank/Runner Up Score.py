@@ -13,3 +13,6 @@
 # 2 3 6 6 5 
 
 # Output - 5 
+
+n = int(input())
+arr = map(int, input().split())
