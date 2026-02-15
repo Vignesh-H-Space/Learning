@@ -21,7 +21,7 @@ for element in arr:
         if (element>large):
             num = large
             large = element
-        elif element > num and element != large : 
+        elif element > num and element != large : # This is the most important part of the code 
             num = element
         
 # print (large) The largest number 
