@@ -1,0 +1,12 @@
+Conceptual Questions 
+
+1. Why is python preferred in the field of Data Science ? 
+2. What is a difference between Jupyter Notebook and Google Collab? 
+3. When would you use a list over a set or a tuple ? 
+4. What is exception Handling? Give real life example when its useful
+5. Define DataFrame and Series in Pandas. What's the difference. 
+6. What are the different ways of dealing with missing values in a dataset?
+7. How do NumPy and Pandas differ in terms of functionality ? 
+8. What is the role of libraries like Seaborn and Matplotlib in a data project?
+9. When should you use .loc[] and when .iloc[]?
+10. What is the importance of writing functions in Python ? 
