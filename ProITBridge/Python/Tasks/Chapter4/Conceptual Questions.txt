@@ -10,3 +10,14 @@ Conceptual Questions
 8. What is the role of libraries like Seaborn and Matplotlib in a data project?
 9. When should you use .loc[] and when .iloc[]?
 10. What is the importance of writing functions in Python ? 
+
+My Answers 
+
+1. Python is preferred in the field of Data Science because of its ability to contain less lines of code with lots of inbuilt functions and packages doing the work.
+2. Both are IDE's but Jupyter Notebook stores in local storage and whereas Google Collab stores in Cloud storage. 
+3. List can be used where the data is suppposed to be immutable, which is , they are often changing. If the data is not going to change, then we can prefer tuple or set. 
+4. Exception Handling is done in cases where we know that the program cannot handle this condition and might throw errors and instead of stopping the program, we are handling that using try and catch. Real life examples include, we might have to do calculations in data science and large datasets and if we are dividing and there is a zero present in any one of the data, then it could cause error , there we use zerodivisionerror exception and handle it. Also one more example would be, we might need input from users as particular datatype but we dont get that, then error is thrown and that has to be handled, we use value Error at that place.
+5. Dataframe is combination of more than one dimensional. Whereas series is one dimensional.
+6. The different ways of dealing with missing data are, approaching the client to provide another proper dataset, if not, then use the existing dataset to arrive at conclusion,if more adhering values are missing, then remove that data from the dataset or else use fillna to fill by using mean and mode so that the dataset isnt affected much. 
+7. NumPy often deals with content related to data analysis since it deals with numbers, data cleaning and other works. Whereas, the Pandas differ as it is used for machine learning where algorithms and other stuffs take place.
+10. The main important feature of functions in Python is code reusability. 
