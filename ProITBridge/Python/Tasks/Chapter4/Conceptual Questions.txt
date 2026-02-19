@@ -21,3 +21,119 @@ My Answers
 6. The different ways of dealing with missing data are, approaching the client to provide another proper dataset, if not, then use the existing dataset to arrive at conclusion,if more adhering values are missing, then remove that data from the dataset or else use fillna to fill by using mean and mode so that the dataset isnt affected much. 
 7. NumPy often deals with content related to data analysis since it deals with numbers, data cleaning and other works. Whereas, the Pandas differ as it is used for machine learning where algorithms and other stuffs take place.
 10. The main important feature of functions in Python is code reusability. 
+
+AI Answers 
+
+1. Why is Python preferred in Data Science?
+
+Python is preferred because of:
+
+✔ Rich ecosystem (NumPy, Pandas, Scikit-learn, TensorFlow, PyTorch)
+✔ Readability and fast prototyping
+✔ Strong community support
+✔ Integration with big data tools (Spark, Hadoop)
+✔ Production deployment capability
+✔ Works across full DS lifecycle (EDA → Modeling → Deployment)
+
+Better answer:
+
+Python is preferred because of its strong ecosystem of data science libraries, ease of prototyping, readability, and its ability to handle the complete data workflow from analysis to model deployment.
+
+2. Jupyter vs Colab
+
+Feature	Jupyter	Colab
+Storage	Local	Cloud
+GPU	Needs setup	Free GPU/TPU
+Collaboration	No	Yes (Google Docs style)
+Setup	Manual	Zero setup
+Offline use	Yes	No
+
+Mention GPU + collaboration. That’s what interviewers want.
+
+3. List vs Tuple vs Set
+
+Correct logic:
+Type	Mutable?	Ordered?	Duplicates?	Use Case
+List	Yes	Yes	Yes	Changing data
+Tuple	No	Yes	Yes	Fixed records
+Set	Yes	No	No	Unique values
+Correct framing:
+
+Use list when order matters and data changes.
+Use tuple when data should not change.
+Use set when uniqueness matters.
+
+4. Exception Handling
+
+Exception handling ensures program continuity even when runtime errors occur.
+
+Add Used in:
+File reading
+API calls
+Database connections
+Data parsing
+
+Shows real DS exposure.
+
+5. DataFrame vs Series
+
+Series = 1D labeled array
+
+DataFrame = 2D labeled table made of multiple Series sharing the same index
+
+Mention:
+DataFrame is tabular structure like SQL table or Excel sheet.
+
+6. Missing Values
+
+Drop rows/columns
+Mean/Median/Mode imputation
+Forward/Backward fill
+Interpolation
+Predictive imputation (KNN / regression)
+Flagging missingness as feature
+Approaching client is nice but not interview-relevant.
+
+7. NumPy vs Pandas
+
+NumPy	Pandas
+Numerical operations	Data manipulation
+N-dimensional arrays	Tabular data
+Fast math ops	Labelled indexing
+Foundation library	Built on NumPy
+
+Machine learning happens in Scikit-learn, not Pandas.
+
+8. Seaborn & Matplotlib
+
+They are used for data visualization.
+
+Matplotlib → Base plotting library
+
+Seaborn → Built on Matplotlib for statistical visualization
+
+Used for:
+EDA
+Pattern detection
+Distribution analysis
+Model evaluation visuals
+
+9. .loc vs .iloc
+Method	Based on
+.loc	Labels
+.iloc	Positions
+
+Example:
+
+df.loc['A'] → row with label A
+df.iloc[0] → first row
+
+10. Functions
+
+Add:
+Functions help with:
+Modularity
+Reusability
+Readability
+Debugging
+Pipeline building
