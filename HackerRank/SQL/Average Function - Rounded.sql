@@ -1,0 +1,1 @@
+select floor(avg(POPULATION)) as average_population_per_city from CITY;
