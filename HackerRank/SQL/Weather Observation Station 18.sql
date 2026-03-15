@@ -1,0 +1,2 @@
+-- Consider P1(a,b) and P2(c,d) to be two points on a 2D plane.
+-- a happens to equal the minimum value in Northern Latitude (LAT_N in STATION).
