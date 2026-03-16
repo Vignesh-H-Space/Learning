@@ -4,3 +4,5 @@
 -- c happens to equal the maximum value in Northern Latitude (LAT_N in STATION).
 -- d happens to equal the maximum value in Western Longitude (LONG_W in STATION).
 -- Query the Manhattan Distance between points P1 and P2 and round it to a scale of 4 decimal places.
+
+select round(((max(LAT_N)-min(LAT_N))+(max(LONG_W)-min(LONG_W))),4) from STATION;
