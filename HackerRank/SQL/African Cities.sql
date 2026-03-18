@@ -2,6 +2,8 @@
 
 -- Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
 
+-- Join function
+
 SELECT CITY.NAME
 FROM CITY
 JOIN COUNTRY ON CITY.COUNTRYCODE = COUNTRY.CODE
