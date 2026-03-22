@@ -19,3 +19,14 @@ create table Players (
     birthdate date,
     team_id int,
 );
+
+-- Matches table
+create table Matches (
+    match_id int auto_increment primary key,
+    home_team_id int,
+    away_team_id int,
+    match_date date,
+    stadium varchar(50),
+    home_score int,
+    away_score int,
+);
