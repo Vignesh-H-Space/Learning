@@ -39,3 +39,14 @@ create table Goals (
     player_id int,
     goal_time int, -- minute of goal
 );
+
+-- Player Statistics table
+create table PlayerStats (
+    stat_id int auto_increment primary key,
+    player_id int,
+    matches_played int,
+    goals_scored int,
+    assists int,
+    yellow_cards int,
+    red_cards int,
+);
