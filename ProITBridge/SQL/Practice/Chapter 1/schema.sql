@@ -16,3 +16,10 @@ create table Courses (
     coursename varchar (50),
     credits int 
 );
+
+create table Enrollment (
+    enrollmentid int auto_increment primary key, 
+    coursename varchar (50),
+    courseid int ,
+    enrollmentdate date 
+);
