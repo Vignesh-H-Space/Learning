@@ -9,3 +9,10 @@ create table Students (
     birthdate date,
     gender varchar (20)
 );
+
+
+create table Courses (
+    courseid int auto_increment primary key, 
+    coursename varchar (50),
+    credits int 
+);
