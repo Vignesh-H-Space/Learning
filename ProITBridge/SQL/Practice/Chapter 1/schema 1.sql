@@ -30,3 +30,12 @@ create table Matches (
     home_score int,
     away_score int,
 );
+
+
+-- Goals table (who scored in which match)
+create table Goals (
+    goal_id int auto_increment primary key,
+    match_id int,
+    player_id int,
+    goal_time int, -- minute of goal
+);
