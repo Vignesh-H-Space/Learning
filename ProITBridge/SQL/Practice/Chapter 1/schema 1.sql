@@ -18,6 +18,7 @@ create table Players (
     position varchar(30),
     birthdate date,
     team_id int,
+    foreign key (team_id) references Teams(team_id)
 );
 
 -- Matches table
@@ -29,6 +30,8 @@ create table Matches (
     stadium varchar(50),
     home_score int,
     away_score int,
+    foreign key (home_team_id) references Teams(team_id),
+    foreign key (away_team_id) references Teams(team_id)
 );
 
 
@@ -38,6 +41,8 @@ create table Goals (
     match_id int,
     player_id int,
     goal_time int, -- minute of goal
+    foreign key (match_id) references Matches(match_id),
+    foreign key (player_id) references Players(player_id)
 );
 
 -- Player Statistics table
@@ -49,4 +54,5 @@ create table PlayerStats (
     assists int,
     yellow_cards int,
     red_cards int,
+    foreign key (player_id) references Players(player_id)
 );
