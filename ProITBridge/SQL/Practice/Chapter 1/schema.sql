@@ -20,6 +20,9 @@ create table Courses (
 create table Enrollment (
     enrollmentid int auto_increment primary key, 
     coursename varchar (50),
+    studentid int,
     courseid int ,
-    enrollmentdate date 
+    enrollmentdate date ,
+    foreign key (studentid) references Students(studentid),
+    foreign key (courseid) references Courses(courseid)
 );
