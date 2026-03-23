@@ -73,3 +73,15 @@ create table Transfers (
     transfer_fee decimal(10,2),
     foreign key (player_id) references Players(player_id)
 );
+
+
+INSERT INTO Seasons (season_name, start_date, end_date) VALUES
+('2024/25', '2024-08-01', '2025-05-31'),
+('2025/26', '2025-08-01', '2026-05-31');
+
+INSERT INTO Teams (team_name, city, coach_name) VALUES
+('Chennai Strikers', 'Chennai', 'Ravi Kumar'),
+('Madurai Warriors', 'Madurai', 'Arjun Singh'),
+('Coimbatore Kings', 'Coimbatore', 'David Raj'),
+('Trichy Titans', 'Trichy', 'Suresh Babu');
+
