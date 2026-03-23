@@ -85,3 +85,18 @@ INSERT INTO Teams (team_name, city, coach_name) VALUES
 ('Coimbatore Kings', 'Coimbatore', 'David Raj'),
 ('Trichy Titans', 'Trichy', 'Suresh Babu');
 
+INSERT INTO Players (first_name, last_name, position, birthdate, team_id) VALUES
+('Arun', 'Prakash', 'Forward', '1998-05-10', 1),
+('Vijay', 'Kumar', 'Midfielder', '1997-08-15', 1),
+('Rahul', 'Das', 'Defender', '1995-03-22', 1),
+
+('Karthik', 'Raja', 'Forward', '1999-01-11', 2),
+('Manoj', 'Singh', 'Midfielder', '1996-07-19', 2),
+('Sathish', 'Kumar', 'Defender', '1994-11-05', 2),
+
+('Ajay', 'Menon', 'Forward', '1998-12-30', 3),
+('Deepak', 'Nair', 'Midfielder', '1997-06-25', 3),
+
+('Praveen', 'K', 'Forward', '2000-02-14', 4),
+('Lokesh', 'R', 'Goalkeeper', '1993-09-09', 4);
+
