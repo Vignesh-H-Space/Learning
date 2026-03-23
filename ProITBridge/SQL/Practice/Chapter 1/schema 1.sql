@@ -56,3 +56,10 @@ create table PlayerStats (
     red_cards int,
     foreign key (player_id) references Players(player_id)
 );
+
+create table Seasons (
+    season_id int auto_increment primary key,
+    season_name varchar(20), -- e.g. 2024/25
+    start_date date,
+    end_date date
+);
