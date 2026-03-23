@@ -122,5 +122,25 @@ INSERT INTO Goals (match_id, player_id, goal_time) VALUES
 (3, 8, 75),
 (3, 4, 88);
 
+INSERT INTO PlayerStats (player_id, matches_played, goals_scored, assists, yellow_cards, red_cards) VALUES
+(1, 10, 5, 2, 1, 0),
+(2, 10, 3, 5, 2, 0),
+(3, 10, 0, 1, 3, 1),
+
+(4, 10, 6, 1, 0, 0),
+(5, 10, 2, 4, 1, 0),
+(6, 10, 0, 0, 2, 0),
+
+(7, 10, 4, 2, 1, 0),
+(8, 10, 2, 3, 0, 0),
+
+(9, 10, 3, 1, 1, 0),
+(10, 10, 0, 0, 0, 0);
+
+INSERT INTO Transfers (player_id, from_team_id, to_team_id, transfer_date, transfer_fee) VALUES
+(7, 3, 1, '2025-06-01', 50000.00),
+(4, 2, 3, '2025-06-05', 75000.00),
+(9, 4, 2, '2025-06-10', 30000.00);
+
 
 
