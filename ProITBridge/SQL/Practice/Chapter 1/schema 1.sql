@@ -63,3 +63,13 @@ create table Seasons (
     start_date date,
     end_date date
 );
+
+create table Transfers (
+    transfer_id int auto_increment primary key,
+    player_id int,
+    from_team_id int,
+    to_team_id int,
+    transfer_date date,
+    transfer_fee decimal(10,2),
+    foreign key (player_id) references Players(player_id)
+);
