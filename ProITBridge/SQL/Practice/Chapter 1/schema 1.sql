@@ -100,3 +100,27 @@ INSERT INTO Players (first_name, last_name, position, birthdate, team_id) VALUES
 ('Praveen', 'K', 'Forward', '2000-02-14', 4),
 ('Lokesh', 'R', 'Goalkeeper', '1993-09-09', 4);
 
+INSERT INTO Matches (home_team_id, away_team_id, match_date, stadium, home_score, away_score) VALUES
+(1, 2, '2025-01-10', 'Chennai Stadium', 2, 1),
+(3, 4, '2025-01-12', 'Coimbatore Arena', 1, 1),
+(2, 3, '2025-01-15', 'Madurai Ground', 3, 2);
+
+INSERT INTO Goals (match_id, player_id, goal_time) VALUES
+-- Match 1
+(1, 1, 23),
+(1, 2, 55),
+(1, 4, 70),
+
+-- Match 2
+(2, 7, 40),
+(2, 9, 65),
+
+-- Match 3
+(3, 4, 10),
+(3, 5, 35),
+(3, 7, 60),
+(3, 8, 75),
+(3, 4, 88);
+
+
+
