@@ -51,3 +51,5 @@ values (1,1,"2025-12-13"),
 (2,4,"2025-06-28");
 
 select * from students;
+
+select lastname, birthdate from students; 
