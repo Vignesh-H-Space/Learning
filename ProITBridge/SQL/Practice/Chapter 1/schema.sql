@@ -10,7 +10,6 @@ create table Students (
     gender varchar (20)
 );
 
-
 create table Courses (
     courseid int auto_increment primary key, 
     coursename varchar (50),
@@ -44,3 +43,9 @@ values ("Mathematics",23),
 
 Insert into courses (coursename, credits)
 values ("Second Language",55);
+
+Insert into enrollment (studentid, courseid, enrollmentdate)
+values (1,1,"2025-12-13"),
+(1,2,"2023-04-16"),
+(2,1,"2025-02-25"),
+(2,4,"2025-06-28");
