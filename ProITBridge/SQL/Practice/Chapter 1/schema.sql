@@ -41,3 +41,6 @@ values ("Mathematics",23),
 ("Social",43),
 ("Science",63),
 ("English",13);
+
+Insert into courses (coursename, credits)
+values ("Second Language",55);
