@@ -143,4 +143,4 @@ INSERT INTO Transfers (player_id, from_team_id, to_team_id, transfer_date, trans
 (9, 4, 2, '2025-06-10', 30000.00);
 
 
-
+select * from Players; 
