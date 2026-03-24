@@ -144,3 +144,5 @@ INSERT INTO Transfers (player_id, from_team_id, to_team_id, transfer_date, trans
 
 
 select * from Players; 
+
+drop transfer_fee from Transfers;  
