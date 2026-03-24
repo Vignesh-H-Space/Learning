@@ -35,3 +35,9 @@ values ("John", "Doe", "2002-05-13","Male"),
 ("July", "Mary", "2004-01-24","Female"),
 ("Angelo", "Mathew", "2006-03-06","Male"),
 ("Sunder", "Raj", "2001-06-23","Male"); 
+
+Insert into courses (coursename, credits)
+values ("Mathematics",23),
+("Social",43),
+("Science",63),
+("English",13);
