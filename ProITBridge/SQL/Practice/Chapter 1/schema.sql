@@ -29,3 +29,9 @@ create table Enrollment (
 
 Insert into students (firstname, lastname, birthdate, gender)
 values ("John", "Doe", "2002-05-13","Male"); 
+
+Insert into students (firstname, lastname, birthdate, gender)
+values ("John", "Doe", "2002-05-13","Male"),
+("July", "Mary", "2004-01-24","Female"),
+("Angelo", "Mathew", "2006-03-06","Male"),
+("Sunder", "Raj", "2001-06-23","Male"); 
