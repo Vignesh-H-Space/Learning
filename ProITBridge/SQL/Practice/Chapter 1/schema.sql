@@ -26,3 +26,6 @@ create table Enrollment (
     foreign key (studentid) references Students(studentid),
     foreign key (courseid) references Courses(courseid)
 );
+
+Insert into students (firstname, lastname, birthdate, gender)
+values ("John", "Doe", "2002-05-13","Male"); 
