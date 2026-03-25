@@ -56,3 +56,5 @@ values (4,2,"2023-09-24");
 select * from students;
 
 select lastname, birthdate from students; 
+
+TRUNCATE TABLE Enrollment;
