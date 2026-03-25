@@ -50,6 +50,9 @@ values (1,1,"2025-12-13"),
 (2,1,"2025-02-25"),
 (2,4,"2025-06-28");
 
+Insert into enrollment (studentid, courseid, enrollmentdate)
+values (4,2,"2023-09-24");
+
 select * from students;
 
 select lastname, birthdate from students; 
