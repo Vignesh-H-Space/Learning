@@ -29,5 +29,10 @@ INSERT INTO orderDetails (orderNumber, productCode, quantityOrdered, priceEach, 
 INSERT INTO orderDetails (orderNumber, productCode, quantityOrdered, priceEach, orderLineNumber ) VALUES  (30002, 'S12_1099', 1, 12000, 1);
 
 
--- Create Table Order 
+-- Create Table Orders 
 CREATE TABLE orders (orderNumber int, orderDate date , requiredDate date , shippedDate date, status varchar (20), comments varchar (50), customerNumber int , foreign key (orderNumber) references orderDetails(orderNumber) );
+
+-- Inserting into Table Orders 
+INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES (30001, '2026-01-10', '2026-01-15', '2026-01-13', 'Shipped', 'Delivered on time', 2001);
+INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES  (30002, '2026-01-12', '2026-01-18', NULL, 'In Process', NULL, 2002);
+
