@@ -58,3 +58,8 @@ select * from students;
 select lastname, birthdate from students; 
 
 TRUNCATE TABLE Enrollment;
+
+SELECT s.firstname, s.lastname, c.coursename
+FROM Students s
+JOIN Enrollment e ON s.studentid = e.studentid
+JOIN Courses c ON e.courseid = c.courseid;
