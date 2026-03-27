@@ -63,3 +63,8 @@ SELECT s.firstname, s.lastname, c.coursename
 FROM Students s
 JOIN Enrollment e ON s.studentid = e.studentid
 JOIN Courses c ON e.courseid = c.courseid;
+
+SELECT c.coursename, COUNT(e.studentid) AS total_students
+FROM Courses c
+LEFT JOIN Enrollment e ON c.courseid = e.courseid
+GROUP BY c.coursename;
