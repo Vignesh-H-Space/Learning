@@ -45,3 +45,5 @@ INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirst
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2002, 'XYZ Electronics', 'Patel', 'Amit', '+91-9123456789', 'Indiranagar', NULL, 'Bangalore', 'Karnataka', '560038', 'India', 1076, 200000);
  
 
+-- Create Table Payments 
+Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDate date, amount bigint, foreign key (customerNumber) references Customers (customerNumber));
