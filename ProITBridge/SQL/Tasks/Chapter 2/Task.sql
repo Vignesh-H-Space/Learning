@@ -51,3 +51,8 @@ Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDat
 -- Inserting into Table Payments 
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2001, 'CHK1001', '2026-01-16', 13000);
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2002, 'CHK1002', '2026-01-17', 12000);
+
+
+-- Create Table Employees 
+create table Employees (employeeNumber int primary key , lastName varchar (20), firstName varchar (20), extension varchar (10), email varchar (40), officeCode int, reportsTo varchar (30), jobTitle varchar (30) )
+
