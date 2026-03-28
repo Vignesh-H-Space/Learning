@@ -60,3 +60,6 @@ create table Employees (employeeNumber int primary key , lastName varchar (20), 
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1002, 'Kumar', 'Arun', 'x101', 'arun.kumar@classic.com', '1', NULL, 'Sales Manager') ;
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1056, 'Ravi', 'Suresh', 'x102', 'suresh.ravi@classic.com', '1', 1002, 'Sales Rep') ;
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1076, 'Sharma', 'Neha', 'x103', 'neha.sharma@classic.com', '2', 1002, 'Sales Rep');
+
+-- Create Table Offices 
+create table Offices (officeCode int primary key, city varchar (30), phone bigint, addressLine1 varchar (30), addressLine2 varchar (30), state varchar (15), country varchar (15), postalCode int , territory varchar (10)) ;
