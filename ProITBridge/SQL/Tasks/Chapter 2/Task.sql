@@ -54,7 +54,7 @@ INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES 
  
 
 -- Create Table Employees 
-create table Employees (employeeNumber int primary key , lastName varchar (20), firstName varchar (20), extension varchar (10), email varchar (40), officeCode int, reportsTo varchar (30), jobTitle varchar (30) )
+create table Employees (employeeNumber int primary key , lastName varchar (20), firstName varchar (20), extension varchar (10), email varchar (40), officeCode int, reportsTo varchar (30), jobTitle varchar (30), foreign key (officeCode) references Offices (officeCode) )
 
 -- Inserting into Table Employees 
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1002, 'Kumar', 'Arun', 'x101', 'arun.kumar@classic.com', '1', NULL, 'Sales Manager') ;
