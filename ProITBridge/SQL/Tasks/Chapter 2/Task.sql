@@ -56,3 +56,7 @@ INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES 
 -- Create Table Employees 
 create table Employees (employeeNumber int primary key , lastName varchar (20), firstName varchar (20), extension varchar (10), email varchar (40), officeCode int, reportsTo varchar (30), jobTitle varchar (30) )
 
+-- Inserting into Table Employees 
+INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1002, 'Kumar', 'Arun', 'x101', 'arun.kumar@classic.com', '1', NULL, 'Sales Manager') ;
+INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1056, 'Ravi', 'Suresh', 'x102', 'suresh.ravi@classic.com', '1', 1002, 'Sales Rep') ;
+INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1076, 'Sharma', 'Neha', 'x103', 'neha.sharma@classic.com', '2', 1002, 'Sales Rep');
