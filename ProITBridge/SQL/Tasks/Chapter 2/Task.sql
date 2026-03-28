@@ -38,7 +38,7 @@ INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status 
 
 
 -- Create Table Customers 
-Create Table Customers (customerNumber int primary key , customerName varchar (25), contactLastName varchar (25), contactFirstName varchar (25), phone varchar (15), addressLine1 varchar (30), addressLine2 varchar (30), city varchar (15), state varchar (15), postalCode varchar (10), country varchar (15), salesRepEmployeeNumber int, creditLimit Bigint );
+Create Table Customers (customerNumber int primary key , customerName varchar (25), contactLastName varchar (25), contactFirstName varchar (25), phone varchar (15), addressLine1 varchar (30), addressLine2 varchar (30), city varchar (15), state varchar (15), postalCode varchar (10), country varchar (15), salesRepEmployeeNumber int, creditLimit Bigint , foreign key  ( salesRepEmployeeNumber) references Employees (employeeNumber) );
 
 -- Inserting into Table Customers
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2001, 'ABC Traders', 'Rao', 'Vikram', '+91-9876543210','Anna Nagar', NULL, 'Chennai', 'Tamil Nadu', '600040', 'India', 1056, 150000); 
@@ -51,7 +51,7 @@ Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDat
 -- Inserting into Table Payments 
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2001, 'CHK1001', '2026-01-16', 13000);
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2002, 'CHK1002', '2026-01-17', 12000);
-
+ 
 
 -- Create Table Employees 
 create table Employees (employeeNumber int primary key , lastName varchar (20), firstName varchar (20), extension varchar (10), email varchar (40), officeCode int, reportsTo varchar (30), jobTitle varchar (30) )
