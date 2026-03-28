@@ -62,4 +62,9 @@ INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, of
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1076, 'Sharma', 'Neha', 'x103', 'neha.sharma@classic.com', '2', 1002, 'Sales Rep');
 
 -- Create Table Offices 
-create table Offices (officeCode int primary key, city varchar (30), phone bigint, addressLine1 varchar (30), addressLine2 varchar (30), state varchar (15), country varchar (15), postalCode int , territory varchar (10)) ;
+create table Offices (officeCode int primary key, city varchar (30), phone varchar (20), addressLine1 varchar (30), addressLine2 varchar (30), state varchar (15), country varchar (15), postalCode int , territory varchar (10)) ;
+
+-- Inserting into Table Offices 
+INSERT Into Offices (officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory ) VALUES ('1', 'Chennai', '+91-44-12345678', 'T Nagar', NULL, 'Tamil Nadu', 'India', '600017', 'APAC') ;
+INSERT Into Offices (officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory ) VALUES ('2', 'Bangalore', '+91-80-87654321', 'MG Road', NULL, 'Karnataka', 'India', '560001', 'APAC');
+
