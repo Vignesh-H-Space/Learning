@@ -47,3 +47,7 @@ INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirst
 
 -- Create Table Payments 
 Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDate date, amount bigint, foreign key (customerNumber) references Customers (customerNumber));
+
+-- Inserting into Table Payments 
+INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2001, 'CHK1001', '2026-01-16', 13000);
+INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2002, 'CHK1002', '2026-01-17', 12000);
