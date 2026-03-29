@@ -82,3 +82,6 @@ where Offices.city = "Chennai";
 -- Display customer names and their assigned sales rep names.
 select Customers.customerName, Employees.firstname, Employees.lastName from Customers 
 JOIN Employees on Employees.employeeNumber = Customers.salesRepEmployeeNumber ;
+
+-- List all products where quantity in stock is less than 80.
+select ProductName from Products where QuantityInStock < 80;
