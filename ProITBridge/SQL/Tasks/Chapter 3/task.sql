@@ -95,3 +95,11 @@ JOIN Payments on Payments.customerNumber = customers.customerNumber ;
 
 -- DML - Insert Data
 INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1040, 'Verma', 'Tilak', 'x105', 'tilak.verma@classic.com', '2', 1002, 'Sales Rep');
+
+-- Enabling Updates 
+SET SQL_SAFE_UPDATES = 0; 
+
+-- Update all customers in Chennai to increase their credit limit by 10%.
+UPDATE Customers
+SET creditLimit = creditLimit * 1.10
+where city = "Chennai";
