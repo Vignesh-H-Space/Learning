@@ -103,3 +103,6 @@ SET SQL_SAFE_UPDATES = 0;
 UPDATE Customers
 SET creditLimit = creditLimit * 1.10
 where city = "Chennai";
+
+-- Delete all orders where status = 'In Process'.
+Delete from Orders where status = 'In Process';
