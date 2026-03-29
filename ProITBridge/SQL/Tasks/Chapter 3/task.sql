@@ -88,3 +88,7 @@ select ProductName from Products where QuantityInStock < 80;
 
 -- Get all orders that are not yet shipped.
 select orderNumber from Orders where STATUS NOT IN ("Shipped");
+
+-- Show the total payment amount made by each customer.
+select Customers.customerName , Payments.amount from Customers
+JOIN Payments on Payments.customerNumber = customers.customerNumber ;
