@@ -75,4 +75,6 @@ INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES 
 select * from Employees where jobTitle = "Sales Rep";
 
 -- Find all the employees who work in the Chennai Office 
-select 
+select Employees.firstName, Employees.lastName from Employees 
+JOIN Offices on Employees.officeCode = Offices.officeCode
+where Offices.city = "Chennai"; 
