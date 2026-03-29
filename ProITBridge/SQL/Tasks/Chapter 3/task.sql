@@ -92,3 +92,6 @@ select orderNumber from Orders where STATUS NOT IN ("Shipped");
 -- Show the total payment amount made by each customer.
 select Customers.customerName , Payments.amount from Customers
 JOIN Payments on Payments.customerNumber = customers.customerNumber ;
+
+-- DML - Insert Data
+INSERT into Employees (employeeNumber,lastName, firstName , extension ,email, officeCode, reportsTo, jobTitle )  VALUES (1040, 'Verma', 'Tilak', 'x105', 'tilak.verma@classic.com', '2', 1002, 'Sales Rep');
