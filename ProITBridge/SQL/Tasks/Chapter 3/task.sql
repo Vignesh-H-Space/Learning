@@ -78,3 +78,7 @@ select * from Employees where jobTitle = "Sales Rep";
 select Employees.firstName, Employees.lastName from Employees 
 JOIN Offices on Employees.officeCode = Offices.officeCode
 where Offices.city = "Chennai"; 
+
+-- Display customer names and their assigned sales rep names.
+select Customers.customerName, Employees.firstname, Employees.lastName from Customers 
+JOIN Employees on Employees.employeeNumber = Customers.salesRepEmployeeNumber ;
