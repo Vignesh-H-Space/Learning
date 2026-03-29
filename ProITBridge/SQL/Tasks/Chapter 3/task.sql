@@ -106,3 +106,8 @@ where city = "Chennai";
 
 -- Delete all orders where status = 'In Process'.
 Delete from Orders where status = 'In Process';
+
+-- Update the quantity in stock of product S12_1099 by reducing it by 5.
+UPDATE Products
+SET QuantityInStock = QuantityInStock - 5 
+where productCode = "S12_1099"
