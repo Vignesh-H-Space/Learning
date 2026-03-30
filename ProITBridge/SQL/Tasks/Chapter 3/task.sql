@@ -119,3 +119,10 @@ INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status 
 SELECT Customers.customerName from Customers
 JOIN Payments on Payments.customerNumber = Customers.customerNumber
 where Payments.amount > 12000;
+
+-- Find all products that have never been ordered.
+SELECT Products.ProductName
+FROM Products
+LEFT JOIN orderDetails 
+ON Products.ProductCode = orderDetails.productCode
+WHERE orderDetails.productCode IS NULL;
