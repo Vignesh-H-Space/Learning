@@ -126,3 +126,6 @@ FROM Products
 LEFT JOIN orderDetails 
 ON Products.ProductCode = orderDetails.productCode
 WHERE orderDetails.productCode IS NULL;
+
+-- Get the most expensive product (based on MSRP)
+SELECT ProductName from Products ORDER BY MSRP DESC LIMIT 1;
