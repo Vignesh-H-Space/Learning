@@ -111,3 +111,7 @@ Delete from Orders where status = 'In Process';
 UPDATE Products
 SET QuantityInStock = QuantityInStock - 5 
 where productCode = "S12_1099"
+
+-- Insert a new order for customer 2001
+INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES  (300015, '2026-03-30', '2026-04-25', NULL, 'In Process', NULL, 2001);
+
