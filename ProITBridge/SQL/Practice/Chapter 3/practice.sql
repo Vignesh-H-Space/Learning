@@ -115,5 +115,17 @@ where productCode = "S12_1099"
 -- Insert a new order for customer 2001
 INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES  (300015, '2026-03-30', '2026-04-25', NULL, 'In Process', NULL, 2001);
 
+-- Find all customers who have made payments greater than 12000.
+SELECT Customers.customerName from Customers
+JOIN Payments on Payments.customerNumber = Customers.customerNumber
+where Payments.amount > 12000;
+
+-- Find all products that have never been ordered.
+SELECT Products.ProductName
+FROM Products
+LEFT JOIN orderDetails 
+ON Products.ProductCode = orderDetails.productCode
+WHERE orderDetails.productCode IS NULL;
+
 
 
