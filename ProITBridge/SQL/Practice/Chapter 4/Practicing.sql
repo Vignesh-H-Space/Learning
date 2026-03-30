@@ -131,3 +131,5 @@ WHERE orderDetails.productCode IS NULL;
 
 -- Get the most expensive product (based on MSRP)
 SELECT ProductName from Products ORDER BY MSRP DESC LIMIT 1;
+-- Other method 
+SELECT ProductName from Products WHERE MSRP = (SELECT MAX(MSRP) FROM Products) ;
