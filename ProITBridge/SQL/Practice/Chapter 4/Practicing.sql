@@ -148,3 +148,7 @@ FROM Payments;
 -- Average Function
 SELECT AVG(BuyPrice) as Average
 FROM Products;
+
+-- Min Function 
+SELECT MIN(BuyPrice) as Cheapest
+FROM Products;
