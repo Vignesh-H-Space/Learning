@@ -151,4 +151,5 @@ FROM Products;
 
 -- Min Function 
 SELECT MIN(BuyPrice) as Cheapest
+MAX(BuyPrice) as Costliest
 FROM Products;
