@@ -150,6 +150,6 @@ SELECT AVG(BuyPrice) as Average
 FROM Products;
 
 -- Min Function 
-SELECT MIN(BuyPrice) as Cheapest
+SELECT MIN(BuyPrice) as Cheapest,
 MAX(BuyPrice) as Costliest
 FROM Products;
