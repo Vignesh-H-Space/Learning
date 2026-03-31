@@ -133,3 +133,9 @@ WHERE orderDetails.productCode IS NULL;
 SELECT ProductName from Products ORDER BY MSRP DESC LIMIT 1;
 -- Other method 
 SELECT ProductName from Products WHERE MSRP = (SELECT MAX(MSRP) FROM Products) ;
+
+
+-- Aggregate Functions -- 
+
+SELECT COUNT(*) AS Total 
+from Products;
