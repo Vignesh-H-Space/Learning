@@ -153,3 +153,8 @@ FROM Products;
 SELECT MIN(BuyPrice) as Cheapest,
 MAX(BuyPrice) as Costliest
 FROM Products;
+
+-- Order Function 
+SELECT COUNT(*) as ORDER_2026
+FROM orders
+where YEAR(OrderDate) = 2026; 
