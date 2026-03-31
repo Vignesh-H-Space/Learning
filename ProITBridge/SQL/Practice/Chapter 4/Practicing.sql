@@ -144,3 +144,7 @@ from Products;
 -- Sum Function 
 SELECT SUM(amount) as Total_Amount
 FROM Payments;
+
+-- Average Function
+SELECT AVG(BuyPrice) as Average
+FROM Products;
