@@ -158,3 +158,7 @@ FROM Products;
 SELECT COUNT(*) as ORDER_2026
 FROM orders
 where YEAR(OrderDate) = 2026; 
+
+SELECT SUM(amount) as SUM_PAID
+FROM Payments
+where customerNumber = 2002; 
