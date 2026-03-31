@@ -137,5 +137,10 @@ SELECT ProductName from Products WHERE MSRP = (SELECT MAX(MSRP) FROM Products) ;
 
 -- Aggregate Functions -- 
 
+-- Count Function
 SELECT COUNT(*) AS Total 
 from Products;
+
+-- Sum Function 
+SELECT SUM(amount) as Total_Amount
+FROM Payments;
