@@ -168,3 +168,7 @@ where customerNumber = 2002;
 SELECT jobTitle, COUNT(*) as TOTAL_COUNT
 FROM Employees
 GROUP BY jobTitle;
+
+SELECT customerNumber ,SUM(amount) as TOTAL_COST
+FROM Payments
+GROUP BY customerNumber;
