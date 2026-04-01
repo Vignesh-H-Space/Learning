@@ -179,6 +179,6 @@ FROM Payments
 GROUP BY customerNumber
 having TOTAL_COST > 12500;
 
-
+-- Sub Query Function
 SELECT customerNumber, amount from PAYMENTS 
 where amount = (SELECT MAX(amount) from Payments);
