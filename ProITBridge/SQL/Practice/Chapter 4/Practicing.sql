@@ -177,3 +177,6 @@ SELECT customerNumber ,SUM(amount) as TOTAL_COST
 FROM Payments
 GROUP BY customerNumber
 having TOTAL_COST > 12500;
+
+SELECT customerNumber, amount from PAYMENTS 
+where amount = (SELECT MAX(amount) from Payments);
