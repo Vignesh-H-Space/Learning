@@ -28,7 +28,8 @@ Create Table Customers (customerNumber int primary key , customerName varchar (2
 -- Inserting into Table Customers
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2001, 'ABC Traders', 'Rao', 'Vikram', '+91-9876543210','Anna Nagar', NULL, 'Chennai', 'Tamil Nadu', '600040', 'India', 1056, 150000); 
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2002, 'XYZ Electronics', 'Patel', 'Amit', '+91-9123456789', 'Indiranagar', NULL, 'Bangalore', 'Karnataka', '560038', 'India', 1076, 200000);
- 
+INSERT INTO Customers (customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit) VALUES (2003, 'Sunrise Textiles', 'Iyer', 'Suresh', '+91-9988776655', 'T. Nagar', NULL, 'Chennai', 'Tamil Nadu', '600017', 'India', 1088, 175000);
+INSERT INTO Customers (customerNumber, customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit) VALUES (2004, 'GreenField Grocers', 'Sharma', 'Neha', '+91-9090909090', 'Connaught Place', NULL, 'New Delhi', 'Delhi', '110001', 'India', 1102, 220000);
 
 -- Creating Table ProductLines
 CREATE TABLE ProductLines (ProductLine varchar (30) primary key , textDescription varchar (50), htmlDescription varchar (50), image BLOB ); 
