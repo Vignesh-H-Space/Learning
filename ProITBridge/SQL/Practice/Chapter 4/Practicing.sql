@@ -154,7 +154,7 @@ SELECT MIN(BuyPrice) as Cheapest,
 MAX(BuyPrice) as Costliest
 FROM Products;
 
--- Order Function 
+-- Where Function 
 SELECT COUNT(*) as ORDER_2026
 FROM orders
 where YEAR(OrderDate) = 2026; 
@@ -162,3 +162,9 @@ where YEAR(OrderDate) = 2026;
 SELECT SUM(amount) as SUM_PAID
 FROM Payments
 where customerNumber = 2002; 
+
+
+-- Group By Function
+SELECT jobTitle, COUNT(*) as TOTAL_COUNT
+FROM Employees
+GROUP BY jobTitle;
