@@ -83,4 +83,4 @@ SELECT COUNT(*) AS TOTAL_CUSTOMERS FROM Customers;
 SELECT AVG(creditLimit) AS AVERAGE_CREDIT_LIMIT FROM Customers;
 
 -- 3. Find the highest and lowest product price (MSRP).
-SELECT MSRP FROM Products ORDER BY MSRP ASC LIMIT 1;
+SELECT MAX(MSRP) as Highest_Price, MIN(MSRP) as Lowest_Price from Products
