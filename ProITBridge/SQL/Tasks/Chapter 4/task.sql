@@ -71,7 +71,7 @@ INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES 
  
 
 
-----------------      TASK 1 -------------------------
+----------------      TASK 1     -------------------------
 -- Task 1 - Aggregate Functions.
 -- 1.Frame 3 problem statements using aggregate functions.
 -- 2.Use functions such as COUNT, SUM, AVG, MIN, or MAX.
@@ -84,3 +84,11 @@ SELECT AVG(creditLimit) AS AVERAGE_CREDIT_LIMIT FROM Customers;
 
 -- 3. Find the highest and lowest product price (MSRP).
 SELECT MAX(MSRP) as Highest_Price, MIN(MSRP) as Lowest_Price from Products
+
+
+
+----------------      TASK 2     -------------------------
+-- Task 2 – Aggregate + WHERE (3)
+-- Find the total payment made by customer 2002
+
+SELECT SUM(amount) as TOTAL_PAYMENT from Payments where customerNumber = 2002;
