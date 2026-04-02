@@ -69,3 +69,12 @@ Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDat
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2001, 'CHK1001', '2026-01-16', 13000);
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2002, 'CHK1002', '2026-01-17', 12000);
  
+
+
+----------------      TASK 1 -------------------------
+-- Task 1 - Aggregate Functions.
+-- 1.Frame 3 problem statements using aggregate functions.
+-- 2.Use functions such as COUNT, SUM, AVG, MIN, or MAX.
+
+-- 1. Find the total number of customers 
+SELECT COUNT(*) AS TOTAL_CUSTOMERS FROM Customers;
