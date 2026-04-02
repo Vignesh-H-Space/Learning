@@ -182,3 +182,7 @@ having TOTAL_COST > 12500;
 -- Sub Query Function
 SELECT customerNumber, amount from PAYMENTS 
 where amount = (SELECT MAX(amount) from Payments);
+
+-- Customers who placed atleast one order 
+SELECT customerName from Customers where customerNumber in 
+(SELECT customerNumber from orders);
