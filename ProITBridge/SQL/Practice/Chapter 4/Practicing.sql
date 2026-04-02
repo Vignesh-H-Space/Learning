@@ -186,3 +186,7 @@ where amount = (SELECT MAX(amount) from Payments);
 -- Customers who placed atleast one order 
 SELECT customerName from Customers where customerNumber in 
 (SELECT customerNumber from orders);
+
+-- Customers with Customer ID who placed atleast one order 
+SELECT customerName,customerNumber from Customers where customerNumber in 
+(SELECT customerNumber from orders);
