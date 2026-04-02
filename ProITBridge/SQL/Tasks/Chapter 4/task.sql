@@ -79,5 +79,8 @@ INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES 
 -- 1. Find the total number of customers 
 SELECT COUNT(*) AS TOTAL_CUSTOMERS FROM Customers;
 
--- 2.Find the average credit limit of all customers
+-- 2. Find the average credit limit of all customers
 SELECT AVG(creditLimit) AS AVERAGE_CREDIT_LIMIT FROM Customers;
+
+-- 3. Find the highest and lowest product price (MSRP).
+SELECT MSRP FROM Products ORDER BY MSRP ASC LIMIT 1;
