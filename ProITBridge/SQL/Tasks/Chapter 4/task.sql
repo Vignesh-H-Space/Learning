@@ -89,16 +89,25 @@ SELECT MAX(MSRP) as Highest_Price, MIN(MSRP) as Lowest_Price from Products
 
 ---------------      TASK 2     -------------------------
 -- Task 2 – Aggregate + WHERE (3)
--- Find the total payment made by customer 2002
 
+-- 1. Find the total payment made by customer 2002
 SELECT SUM(amount) as TOTAL_PAYMENT from Payments where customerNumber = 2002;
 
-
--- Find the total payment made in the year 2026.
+-- 2. Find the total payment made in the year 2026.
 SELECT SUM(amount) as TOTAL_PAYMENT from Payments where YEAR(paymentDate) = 2026;
 
--- Find the average quantity ordered for a specific product (S10_1678).
+-- 3. Find the average quantity ordered for a specific product (S10_1678).
 SELECT AVG(quantityOrdered) as AVERAGE_QUANTITY from orderDetails WHERE productCode = "S10_1678" ;
 
--- Find the maximum payment made by customer 2001
+-- 4. Find the maximum payment made by customer 2001
 SELECT MAX(amount) as MAXIMUM_PAYMENT from Payments where  customerNumber = 2001 ;
+
+
+
+---------------      TASK 3     -------------------------
+-- Aggregate + GROUP BY (3)
+
+-- 1. Find the number of customers in each city.
+SELECT city, COUNT(customerName) AS total_customers
+FROM customers
+GROUP BY city;
