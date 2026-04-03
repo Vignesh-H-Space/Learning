@@ -111,3 +111,8 @@ SELECT MAX(amount) as MAXIMUM_PAYMENT from Payments where  customerNumber = 2001
 SELECT city, COUNT(customerName) AS total_customers
 FROM customers
 GROUP BY city;
+
+-- 2. Find the total quantity ordered for each product.
+SELECT productCode, SUM(quantityOrdered) AS TOTAL_QUANTITY
+from orderDetails
+GROUP BY productCode;
