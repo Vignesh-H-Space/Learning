@@ -87,8 +87,14 @@ SELECT MAX(MSRP) as Highest_Price, MIN(MSRP) as Lowest_Price from Products
 
 
 
-----------------      TASK 2     -------------------------
+---------------      TASK 2     -------------------------
 -- Task 2 – Aggregate + WHERE (3)
 -- Find the total payment made by customer 2002
 
 SELECT SUM(amount) as TOTAL_PAYMENT from Payments where customerNumber = 2002;
+
+
+-- Find the total payment made in the year 2026.
+SELECT SUM(amount) as TOTAL_PAYMENT from Payments where YEAR(paymentDate) = 2026;
+
+-- Find the average quantity ordered for a specific product (S10_1678).
