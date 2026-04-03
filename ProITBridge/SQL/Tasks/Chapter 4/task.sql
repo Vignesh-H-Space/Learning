@@ -98,3 +98,4 @@ SELECT SUM(amount) as TOTAL_PAYMENT from Payments where customerNumber = 2002;
 SELECT SUM(amount) as TOTAL_PAYMENT from Payments where YEAR(paymentDate) = 2026;
 
 -- Find the average quantity ordered for a specific product (S10_1678).
+SELECT AVG(quantityOrdered) as AVERAGE_QUANTITY from orderDetails WHERE productCode = "S10_1678" ;
