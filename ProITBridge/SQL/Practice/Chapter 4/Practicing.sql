@@ -209,3 +209,7 @@ WHERE customerNumber NOT IN (
 SELECT customerNumber
 FROM Payments
 WHERE amount > (SELECT AVG(amount) FROM Payments);
+
+-- Count number of orders for each status
+SELECT status, count(*) AS TOTAL_ORDERS 
+FROM orders GROUP BY STATUS; 
