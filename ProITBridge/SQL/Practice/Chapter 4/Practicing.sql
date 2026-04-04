@@ -197,3 +197,10 @@ FROM Employees
 WHERE employeeNumber NOT IN (
     SELECT salesRepEmployeeNumber FROM Customers
 );
+
+-- List customers who have never placed an order.
+SELECT customerName
+FROM Customers
+WHERE customerNumber NOT IN (
+    SELECT customerNumber FROM Orders
+);
