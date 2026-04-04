@@ -222,3 +222,11 @@ WHERE reportsTo = 1002;
 -- Find total stock value for each product
 SELECT ProductName, (QuantityInStock * BuyPrice) AS stock_value
 FROM Products;
+
+-- Find products that have been ordered at least once
+SELECT ProductName
+FROM Products
+WHERE ProductCode IN (
+    SELECT productCode
+    FROM OrderDetails
+);
