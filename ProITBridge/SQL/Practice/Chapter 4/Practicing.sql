@@ -218,3 +218,7 @@ FROM orders GROUP BY STATUS;
 SELECT firstName, lastName
 FROM Employees
 WHERE reportsTo = 1002;
+
+-- Find total stock value for each product
+SELECT ProductName, (QuantityInStock * BuyPrice) AS stock_value
+FROM Products;
