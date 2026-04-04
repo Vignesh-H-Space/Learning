@@ -213,3 +213,8 @@ WHERE amount > (SELECT AVG(amount) FROM Payments);
 -- Count number of orders for each status
 SELECT status, count(*) AS TOTAL_ORDERS 
 FROM orders GROUP BY STATUS; 
+
+-- Find employees who report to manager 1002
+SELECT firstName, lastName
+FROM Employees
+WHERE reportsTo = 1002;
