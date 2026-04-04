@@ -204,3 +204,8 @@ FROM Customers
 WHERE customerNumber NOT IN (
     SELECT customerNumber FROM Orders
 );
+
+-- Find the second highest MSRP product.
+SELECT customerNumber
+FROM Payments
+WHERE amount > (SELECT AVG(amount) FROM Payments);
