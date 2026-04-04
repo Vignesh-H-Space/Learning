@@ -121,3 +121,10 @@ GROUP BY productCode;
 SELECT city, AVG(creditLimit) as AVERAGE_CREDIT
 from customers
 GROUP BY city;
+
+
+---------------      TASK 4     -------------------------
+-- SUBQUERY
+-- Find the customers whose credit limit is greater than the average credit limit of all customers.
+SELECT customerName from customers 
+where creditLimit > (SELECT AVG(creditLimit) FROM customers);
