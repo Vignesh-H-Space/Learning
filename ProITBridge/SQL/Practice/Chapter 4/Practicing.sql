@@ -190,3 +190,10 @@ SELECT customerName from Customers where customerNumber in
 -- Customers with Customer ID who placed atleast one order 
 SELECT customerName,customerNumber from Customers where customerNumber in 
 (SELECT customerNumber from orders);
+
+-- Get employees who are not assigned to any customer.
+SELECT employeeNumber, firstName
+FROM Employees
+WHERE employeeNumber NOT IN (
+    SELECT salesRepEmployeeNumber FROM Customers
+);
