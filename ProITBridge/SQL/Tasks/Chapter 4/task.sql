@@ -116,3 +116,8 @@ GROUP BY city;
 SELECT productCode, SUM(quantityOrdered) AS TOTAL_QUANTITY
 from orderDetails
 GROUP BY productCode;
+
+-- 3. Find the average credit limit grouped by city.
+SELECT city, AVG(creditLimit) as AVERAGE_CREDIT
+from customers
+GROUP BY city;
