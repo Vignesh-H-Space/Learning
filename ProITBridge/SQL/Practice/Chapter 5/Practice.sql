@@ -79,3 +79,6 @@ INNER JOIN Orders ON Customers.customerNumber = orders.customerNumber;
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2003, 'PQR Media', 'Ram', 'Manoj', '+91-9876543210','Anna Nagar', NULL, 'Chennai', 'Tamil Nadu', '600040', 'India', 1056, 3500000); 
 INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirstName, phone,  addressLine1, addressLine2, city, state , postalCode, country,  salesRepEmployeeNumber, creditLimit) VALUES (2004, 'GHJ Hardwares', 'Prajesh', 'Anandh', '+91-9123456789', 'Indiranagar', NULL, 'Bangalore', 'Karnataka', '560038', 'India', 1076, 240000);
  
+-- LEFT JOIN OPERATION
+SELECT Customers.customerName , Orders.orderNumber from Customers 
+LEFT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
