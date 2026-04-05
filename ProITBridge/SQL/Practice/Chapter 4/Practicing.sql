@@ -230,3 +230,7 @@ WHERE ProductCode IN (
     SELECT productCode
     FROM OrderDetails
 );
+
+-- Total Number of Customers
+SELECT COUNT(*) AS total_customers
+FROM Customers;
