@@ -69,3 +69,7 @@ Create Table Payments (customerNumber int, checkNumber varchar (10),  paymentDat
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2001, 'CHK1001', '2026-01-16', 13000);
 INSERT INTO Payments (customerNumber,checkNumber, paymentDate , amount ) VALUES (2002, 'CHK1002', '2026-01-17', 12000);
  
+
+-- INNER JOIN 
+SELECT Customers.customerName , Orders.orderNumber from Customers 
+INNER JOIN Orders ON Customers.customerNumber = orders.customerNumber;
