@@ -82,3 +82,8 @@ INSERT INTO Customers (customerNumber,customerName,contactLastName, contactFirst
 -- LEFT JOIN OPERATION
 SELECT Customers.customerName , Orders.orderNumber from Customers 
 LEFT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
+
+-- RIGHT JOIN 
+-- DATA First 
+INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES (400023, '2022-01-10', '2027-01-15', '2026-01-13', 'Shipped', 'Delivered on time', 2002);
+INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status , comments , customerNumber) VALUES  (300023, '2023-01-12', '2029-01-18', NULL, 'In Process', NULL, 2004);
