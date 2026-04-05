@@ -245,3 +245,8 @@ SELECT officeCode, COUNT(*) AS emp_count
 FROM Employees
 GROUP BY officeCode
 HAVING emp_count > 1;
+
+-- Count of products per product line
+SELECT ProductLine, COUNT(*) AS total_products
+FROM Products
+GROUP BY ProductLine;
