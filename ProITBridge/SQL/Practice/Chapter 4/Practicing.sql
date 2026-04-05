@@ -234,3 +234,8 @@ WHERE ProductCode IN (
 -- Total Number of Customers
 SELECT COUNT(*) AS total_customers
 FROM Customers;
+
+-- Number of employees in each office
+SELECT officeCode, COUNT(*) AS total_employees
+FROM Employees
+GROUP BY officeCode;
