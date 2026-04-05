@@ -239,3 +239,9 @@ FROM Customers;
 SELECT officeCode, COUNT(*) AS total_employees
 FROM Employees
 GROUP BY officeCode;
+
+-- Offices having more than 1 employee
+SELECT officeCode, COUNT(*) AS emp_count
+FROM Employees
+GROUP BY officeCode
+HAVING emp_count > 1;
