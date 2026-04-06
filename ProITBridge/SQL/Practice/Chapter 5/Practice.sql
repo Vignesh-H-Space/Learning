@@ -93,9 +93,13 @@ SELECT Customers.customerName , Orders.orderNumber from Customers
 RIGHT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
 
 -- FULL JOIN - UNION
-
 SELECT Customers.customerName , Orders.orderNumber from Customers 
 LEFT JOIN Orders ON Customers.customerNumber = orders.customerNumber 
 UNION
 SELECT Customers.customerName , Orders.orderNumber from Customers 
 RIGHT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
+
+-- SELF JOIN 
+SELECT e.firstName as employee, m.firstName as managers 
+From Employees e 
+LEFT JOIN Employees m on e.reportsTo = m.employeeNumber;
