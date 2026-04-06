@@ -11,3 +11,11 @@ INSERT INTO Authors VALUES
 (4, 'Agatha Christie', 'UK'),
 (5, 'Dan Brown', 'USA');
 
+CREATE TABLE Books (book_id INT PRIMARY KEY, title VARCHAR(100), genre VARCHAR(50), author_id INT, FOREIGN KEY (author_id) REFERENCES Authors(author_id));
+
+INSERT INTO Books VALUES
+(101, 'Harry Potter', 'Fantasy', 1),
+(102, '1984', 'Dystopian', 2),
+(103, 'Half Girlfriend', 'Romance', 3),
+(104, 'Murder on the Orient Express', 'Mystery', 4),
+(105, 'The Da Vinci Code', 'Thriller', 5);
