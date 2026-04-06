@@ -91,3 +91,11 @@ INSERT INTO orders (orderNumber, orderDate, requiredDate , shippedDate , status 
 -- RIGHT JOIN OPERATION
 SELECT Customers.customerName , Orders.orderNumber from Customers 
 RIGHT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
+
+-- FULL JOIN - UNION
+
+SELECT Customers.customerName , Orders.orderNumber from Customers 
+LEFT JOIN Orders ON Customers.customerNumber = orders.customerNumber 
+UNION
+SELECT Customers.customerName , Orders.orderNumber from Customers 
+RIGHT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
