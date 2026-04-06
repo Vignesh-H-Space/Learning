@@ -108,3 +108,7 @@ LEFT JOIN Employees m on e.reportsTo = m.employeeNumber;
 SELECT e.firstName as employee, m.firstName as managers 
 From Employees m
 RIGHT JOIN Employees m on m.employeeNumber = e.reportsTo;
+
+-- CROSS JOIN 
+SELECT Customers.customerName, Products.ProductName FROM Customers
+CROSS JOIN Products;
