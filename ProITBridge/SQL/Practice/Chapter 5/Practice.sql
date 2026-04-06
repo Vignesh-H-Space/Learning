@@ -103,3 +103,8 @@ RIGHT JOIN Orders ON Customers.customerNumber = orders.customerNumber;
 SELECT e.firstName as employee, m.firstName as managers 
 From Employees e 
 LEFT JOIN Employees m on e.reportsTo = m.employeeNumber;
+
+-- SELF JOIN 2 
+SELECT e.firstName as employee, m.firstName as managers 
+From Employees m
+RIGHT JOIN Employees m on m.employeeNumber = e.reportsTo;
