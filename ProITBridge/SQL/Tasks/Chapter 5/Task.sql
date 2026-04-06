@@ -29,3 +29,12 @@ INSERT INTO Members VALUES
 (3, 'Rahul', '2024-03-05'),
 (4, 'Sneha', '2024-03-20'),
 (5, 'Karthik', '2024-04-01');
+
+CREATE TABLE Borrow (borrow_id INT PRIMARY KEY, member_id INT, book_id INT, borrow_date DATE, FOREIGN KEY (member_id) REFERENCES Members(member_id), FOREIGN KEY (book_id) REFERENCES Books(book_id));
+
+INSERT INTO Borrow VALUES
+(1, 1, 101, '2024-04-10'),
+(2, 2, 102, '2024-04-11'),
+(3, 3, 103, '2024-04-12'),
+(4, 4, 104, '2024-04-13'),
+(5, 5, 105, '2024-04-14');
