@@ -19,3 +19,13 @@ INSERT INTO Books VALUES
 (103, 'Half Girlfriend', 'Romance', 3),
 (104, 'Murder on the Orient Express', 'Mystery', 4),
 (105, 'The Da Vinci Code', 'Thriller', 5);
+
+
+CREATE TABLE Members (member_id INT PRIMARY KEY, name VARCHAR(100), join_date DATE);
+
+INSERT INTO Members VALUES
+(1, 'Arun', '2024-01-10'),
+(2, 'Priya', '2024-02-15'),
+(3, 'Rahul', '2024-03-05'),
+(4, 'Sneha', '2024-03-20'),
+(5, 'Karthik', '2024-04-01');
