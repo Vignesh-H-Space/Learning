@@ -94,5 +94,10 @@ SET FOREIGN_KEY_CHECKS = 1;
 -- LEFT JOIN
 
 -- List all authors and their books (include authors who haven’t written any books).
-SELECT authors.name, books.title from authors
-LEFT JOIN books on authors.author_id = books.author_id ; 
+SELECT authors.name, books.title FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id ; 
+
+-- Show all members and the books they borrowed (include members who haven’t borrowed anything).
+SELECT members.name, books.title FROM borrow
+LEFT JOIN members ON borrow.member_id = members.member_id 
+LEFT JOIN books ON borrow.book_id = books.book_id ;
