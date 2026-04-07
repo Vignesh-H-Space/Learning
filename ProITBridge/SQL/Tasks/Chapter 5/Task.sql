@@ -67,6 +67,30 @@ SELECT books.title, books.genre , authors.country FROM authors
 INNER JOIN books on authors.author_id = books.author_id;
 
 
+-- For Join to work properly, adding more data to tables
+INSERT INTO Authors VALUES
+(6, 'R.K. Narayan', 'India'),
+(7, 'J.R.R. Tolkien', 'UK'),
+(8, 'Unknown Author', 'Mars');  
+
+INSERT INTO Books VALUES
+(106, 'The Hobbit', 'Fantasy', 7),
+(107, 'Malgudi Days', 'Fiction', 6),
+(108, 'Invisible Book', 'Sci-Fi', NULL);
+
+INSERT INTO Members VALUES
+(6, 'Divya', '2024-04-05'),
+(7, 'Vikram', '2024-04-06');
+
+SET FOREIGN_KEY_CHECKS = 0;
+INSERT INTO Borrow VALUES
+(6, 1, 102, '2024-04-15'),
+(7, 2, 103, '2024-04-16'),
+(8, 3, 999, '2024-04-17'),
+(9, 999, 101, '2024-04-18');
+SET FOREIGN_KEY_CHECKS = 1;
+
+
 -- LEFT JOIN
 
 -- List all authors and their books (include authors who haven’t written any books).
