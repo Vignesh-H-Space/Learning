@@ -50,7 +50,9 @@ INSERT INTO Borrow VALUES
 (4, 4, 104, '2024-04-13'),
 (5, 5, 105, '2024-04-14');
 
+
 -- INNER JOIN 
+
 -- List all books with their author names 
 SELECT Books.title, authors.name from authors 
 INNER JOIN Books ON authors.author_id = books.author_id;
@@ -63,3 +65,10 @@ INNER JOIN Members ON borrow.member_id = members.member_id;
 -- Display book title, genre, and author country.
 SELECT books.title, books.genre , authors.country FROM authors
 INNER JOIN books on authors.author_id = books.author_id;
+
+
+-- LEFT JOIN
+
+-- List all authors and their books (include authors who haven’t written any books).
+SELECT authors.name, books.title from authors
+LEFT JOIN books on authors.author_id = books.author_id ; 
