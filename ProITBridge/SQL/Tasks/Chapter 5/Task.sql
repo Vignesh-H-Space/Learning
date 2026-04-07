@@ -59,3 +59,7 @@ INNER JOIN Books ON authors.author_id = books.author_id;
 SELECT members.name, books.title FROM books
 INNER JOIN Borrow ON books.book_id = borrow.book_id
 INNER JOIN Members ON borrow.member_id = members.member_id;
+
+-- Display book title, genre, and author country.
+SELECT books.title, books.genre , authors.country FROM authors
+INNER JOIN books on authors.author_id = books.author_id;
