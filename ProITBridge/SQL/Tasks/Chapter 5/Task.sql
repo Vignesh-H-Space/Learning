@@ -101,3 +101,7 @@ LEFT JOIN books ON authors.author_id = books.author_id ;
 SELECT members.name, books.title FROM borrow
 LEFT JOIN members ON borrow.member_id = members.member_id 
 LEFT JOIN books ON borrow.book_id = books.book_id ;
+
+-- List all members with borrow dates (null if no borrow).
+SELECT members.name, borrow.borrow_date FROM members
+LEFT JOIN borrow ON members.member_id = borrow.member_id; 
