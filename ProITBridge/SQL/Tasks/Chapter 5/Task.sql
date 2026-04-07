@@ -54,3 +54,8 @@ INSERT INTO Borrow VALUES
 -- List all books with their author names 
 SELECT Books.title, authors.name from authors 
 INNER JOIN Books ON authors.author_id = books.author_id;
+
+-- Show which members borrowed which books (include member name and book title).
+SELECT members.name, books.title FROM books
+INNER JOIN Borrow ON books.book_id = borrow.book_id
+INNER JOIN Members ON borrow.member_id = members.member_id;
