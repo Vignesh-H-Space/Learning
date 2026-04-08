@@ -129,5 +129,5 @@ RIGHT JOIN authors ON books.author_id = authors.author_id;
 SELECT authors.name, books.title FROM authors
 LEFT JOIN books ON authors.author_id = books.author_id 
 UNION
-SELECT  books.title, authors.name FROM books
+SELECT   authors.name, books.title FROM books
 RIGHT JOIN authors ON books.author_id = authors.author_id ; 
