@@ -51,7 +51,7 @@ INSERT INTO Borrow VALUES
 (5, 5, 105, '2024-04-14');
 
 
--- INNER JOIN 
+----------- INNER JOIN  ---------------
 
 -- List all books with their author names 
 SELECT Books.title, authors.name from authors 
@@ -91,8 +91,8 @@ INSERT INTO Borrow VALUES
 SET FOREIGN_KEY_CHECKS = 1;
 
 
--- LEFT JOIN
-
+------------ LEFT JOIN -----------
+ 
 -- List all authors and their books (include authors who haven’t written any books).
 SELECT authors.name, books.title FROM authors
 LEFT JOIN books ON authors.author_id = books.author_id ; 
@@ -107,7 +107,7 @@ SELECT members.name, borrow.borrow_date FROM members
 LEFT JOIN borrow ON members.member_id = borrow.member_id; 
 
 
--- RIGHT JOIN 
+------------ RIGHT JOIN ------------
 
 -- List all books and their authors (include books even if author info is missing).
 SELECT  books.title, authors.name FROM books
@@ -122,3 +122,12 @@ LEFT JOIN books ON borrow.book_id = books.book_id;
 -- List all books and matching authors using RIGHT JOIN.
 SELECT books.title , authors.name from books
 RIGHT JOIN authors ON books.author_id = authors.author_id; 
+
+
+------------- FULL JOIN ---------------
+-- Show all authors and books (include unmatched records from both sides).
+SELECT authors.name, books.title FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id 
+UNION
+SELECT  books.title, authors.name FROM books
+RIGHT JOIN authors ON books.author_id = authors.author_id ; 
