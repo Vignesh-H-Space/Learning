@@ -118,3 +118,7 @@ SELECT members.name, books.title
 FROM members
 RIGHT JOIN borrow ON borrow.member_id = members.member_id
 LEFT JOIN books ON borrow.book_id = books.book_id;
+
+-- List all books and matching authors using RIGHT JOIN.
+SELECT books.title , authors.name from books
+RIGHT JOIN authors ON books.author_id = authors.author_id; 
