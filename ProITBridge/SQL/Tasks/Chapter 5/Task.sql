@@ -98,8 +98,8 @@ SELECT authors.name, books.title FROM authors
 LEFT JOIN books ON authors.author_id = books.author_id ; 
 
 -- Show all members and the books they borrowed (include members who haven’t borrowed anything).
-SELECT members.name, books.title FROM borrow
-LEFT JOIN members ON borrow.member_id = members.member_id 
+SELECT members.name, books.title FROM members
+LEFT JOIN borrow ON members.member_id = borrow.member_id
 LEFT JOIN books ON borrow.book_id = books.book_id ;
 
 -- List all members with borrow dates (null if no borrow).
@@ -111,4 +111,10 @@ LEFT JOIN borrow ON members.member_id = borrow.member_id;
 
 -- List all books and their authors (include books even if author info is missing).
 SELECT  books.title, authors.name FROM books
-LEFT JOIN authors ON books.author_id = authors.author_id ; 
+RIGHT JOIN authors ON books.author_id = authors.author_id ; 
+
+-- Show all borrow records and member names (include borrow records even if member missing).
+SELECT members.name, books.title
+FROM members
+RIGHT JOIN borrow ON borrow.member_id = members.member_id
+LEFT JOIN books ON borrow.book_id = books.book_id;
