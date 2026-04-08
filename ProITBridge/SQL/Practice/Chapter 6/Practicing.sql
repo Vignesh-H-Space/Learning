@@ -15,3 +15,10 @@ INSERT INTO sales_data (transaction_id, employee_id, month, sales_amount) VALUES
 (7,103,'2024-03',800.00),
 (8,102,'2024-03',700.00),
 (9,104,'2024-03',300.00); 
+
+SELECT * FROM sales_data;
+
+-- Write a query that Ranks the sales amount in descending order from the 'sales_data' table and assign a rank to each row 
+SELECT * ,
+RANK() OVER (ORDER BY sales_amount desc) as RankTable
+FROM sales_data;
