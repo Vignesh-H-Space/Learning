@@ -19,6 +19,11 @@ INSERT INTO sales_data (transaction_id, employee_id, month, sales_amount) VALUES
 SELECT * FROM sales_data;
 
 -- Write a query that Ranks the sales amount in descending order from the 'sales_data' table and assign a rank to each row 
+
+SELECT * ,
+RANK() OVER (ORDER BY sales_amount desc) as RankTable
+FROM sales_data;
+
 SELECT * ,
 DENSE_RANK() OVER (ORDER BY sales_amount desc) as RankTable
 FROM sales_data;
