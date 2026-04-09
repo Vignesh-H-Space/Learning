@@ -147,3 +147,9 @@ LEFT JOIN borrow ON members.member_id = borrow.member_id
 UNION
 SELECT members.name, borrow.borrow_date FROM borrow
 RIGHT JOIN members ON borrow.member_id = members.member_id ;
+
+
+------------- CROSS JOIN --------------------
+-- Show all possible combinations of members and books.
+SELECT members.name , books.title FROM members
+CROSS JOIN books;
