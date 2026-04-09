@@ -27,3 +27,10 @@ FROM sales_data;
 SELECT * ,
 DENSE_RANK() OVER (ORDER BY sales_amount desc) as RankTable
 FROM sales_data;
+
+
+-- Write a query that ranks the sales_amount for each month (partition by month ) in descending order from the sales_data
+
+SELECT * , 
+RANK() OVER(partition by month order by sales_amount desc) as  partition_by_month 
+FROM sales_data;
