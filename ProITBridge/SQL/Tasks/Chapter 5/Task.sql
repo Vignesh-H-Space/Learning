@@ -129,7 +129,7 @@ RIGHT JOIN authors ON books.author_id = authors.author_id;
 SELECT authors.name, books.title FROM authors
 LEFT JOIN books ON authors.author_id = books.author_id 
 UNION
-SELECT   authors.name, books.title FROM books
+SELECT authors.name, books.title FROM books
 RIGHT JOIN authors ON books.author_id = authors.author_id ; 
 
 -- List all members and borrow records (include members with no borrow and borrow with no member).
@@ -140,3 +140,10 @@ UNION
 SELECT members.name, books.title FROM members
 RIGHT JOIN borrow ON borrow.member_id = members.member_id
 LEFT JOIN books ON borrow.book_id = books.book_id;
+
+-- Display all books and borrow entries (include unborrowed books).
+SELECT members.name, borrow.borrow_date FROM members
+LEFT JOIN borrow ON members.member_id = borrow.member_id
+UNION
+SELECT members.name, borrow.borrow_date FROM borrow
+RIGHT JOIN members ON borrow.member_id = members.member_id ;
