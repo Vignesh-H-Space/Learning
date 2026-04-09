@@ -19,7 +19,6 @@ INSERT INTO sales_data (transaction_id, employee_id, month, sales_amount) VALUES
 SELECT * FROM sales_data;
 
 -- Write a query that Ranks the sales amount in descending order from the 'sales_data' table and assign a rank to each row 
-
 SELECT * ,
 RANK() OVER (ORDER BY sales_amount desc) as RankTable
 FROM sales_data;
@@ -30,7 +29,11 @@ FROM sales_data;
 
 
 -- Write a query that ranks the sales_amount for each month (partition by month ) in descending order from the sales_data
-
 SELECT * , 
 RANK() OVER(partition by month order by sales_amount desc) as  partition_by_month 
+FROM sales_data;
+
+-- Write a query that calculates the running total of sales_amount for each employee, order by month from the sales_data
+SELECT * , 
+SUM(sales_amount) OVER  (PARTITION BY employee_id order by month ) as total
 FROM sales_data;
