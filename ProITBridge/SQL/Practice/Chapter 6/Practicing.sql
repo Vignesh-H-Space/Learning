@@ -37,3 +37,8 @@ FROM sales_data;
 SELECT * , 
 SUM(sales_amount) OVER  (PARTITION BY employee_id order by month ) as total
 FROM sales_data;
+
+-- Write a query that shows the previous months's sales_amount for each employee from the sales data table, using LAG() function 
+SELECT * , 
+LAG(sales_amount) OVER  (PARTITION BY employee_id order by month ) as Prev_month
+FROM sales_data;
