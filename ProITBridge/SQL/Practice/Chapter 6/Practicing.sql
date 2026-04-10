@@ -46,3 +46,11 @@ FROM sales_data;
 SELECT * , 
 LEAD(sales_amount) OVER  (PARTITION BY employee_id order by month ) as Next_month
 FROM sales_data;
+
+
+--------------------- STORED PROCEDURES ---------------
+
+-- Show all Sales 
+
+
+delimiter $$ 
