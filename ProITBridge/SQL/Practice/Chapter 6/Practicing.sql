@@ -54,3 +54,8 @@ FROM sales_data;
 
 
 delimiter $$ 
+
+create procedure get_all_sales()
+begin 
+    select * from sales_data;
+end $$ 
