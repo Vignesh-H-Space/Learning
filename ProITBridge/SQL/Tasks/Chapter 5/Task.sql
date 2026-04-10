@@ -153,3 +153,7 @@ RIGHT JOIN members ON borrow.member_id = members.member_id ;
 -- Show all possible combinations of members and books.
 SELECT members.name , books.title FROM members
 CROSS JOIN books;
+
+-- List every author paired with every book.
+SELECT authors.name, books.title FROM authors
+CROSS JOIN books;
