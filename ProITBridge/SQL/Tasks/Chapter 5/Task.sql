@@ -157,3 +157,7 @@ CROSS JOIN books;
 -- List every author paired with every book.
 SELECT authors.name, books.title FROM authors
 CROSS JOIN books;
+
+-- Generate all combinations of members and authors.
+SELECT members.name , authors.name FROM members
+CROSS JOIN authors;
