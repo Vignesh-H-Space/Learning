@@ -42,3 +42,7 @@ FROM sales_data;
 SELECT * , 
 LAG(sales_amount) OVER  (PARTITION BY employee_id order by month ) as Prev_month
 FROM sales_data;
+
+SELECT * , 
+LEAD(sales_amount) OVER  (PARTITION BY employee_id order by month ) as Next_month
+FROM sales_data;
