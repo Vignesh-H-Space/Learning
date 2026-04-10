@@ -169,3 +169,9 @@ SELECT A1.name AS Author1, A2.name AS Author2, A1.country
 FROM Authors A1
 JOIN Authors A2 
 ON A1.country = A2.country ;
+
+-- Find members who joined before other members
+SELECT M1.name AS Earlier_Member, M2.name AS Later_Member, M1.join_date, M2.join_date
+FROM Members M1
+JOIN Members M2
+ON M1.join_date < M2.join_date;
