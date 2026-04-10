@@ -161,3 +161,11 @@ CROSS JOIN books;
 -- Generate all combinations of members and authors.
 SELECT members.name , authors.name FROM members
 CROSS JOIN authors;
+
+
+--------------- SELF JOIN ------------------
+-- Show pairs of authors from the same country.
+SELECT A1.name AS Author1, A2.name AS Author2, A1.country
+FROM Authors A1
+JOIN Authors A2 
+ON A1.country = A2.country ;
