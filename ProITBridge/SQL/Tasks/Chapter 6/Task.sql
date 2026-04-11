@@ -42,3 +42,8 @@ SELECT employees.employee_id, salaries.month, salaries.salary, employees.employe
 DENSE_RANK() OVER (PARTITION BY department ORDER BY salary desc) as SALARY_ORDER
 FROM salaries
 JOIN employees ON salaries.employee_id = employees.employee_id ; 
+
+-- Calculate the running total salary for each employee over months.
+SELECT * ,
+SUM(salary) OVER (ORDER BY salary desc) as TOTAL_SALARY
+FROM salaries;
