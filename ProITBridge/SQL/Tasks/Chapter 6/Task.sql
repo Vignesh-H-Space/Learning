@@ -38,7 +38,7 @@ RANK() OVER (ORDER BY salary desc) as SALARY_ORDER
 FROM salaries; 
 
 -- Rank employees within each department based on salary (highest first).
-SELECT * ,
+SELECT employees.employee_id, salaries.month, salaries.salary, employees.employee_name, employees.department,
 RANK() OVER (PARTITION BY department ORDER BY salary desc) as SALARY_ORDER
 FROM salaries
-JOIN Employees ON salaries.employee_id = Employees.employee_id ; 
+JOIN employees ON salaries.employee_id = employees.employee_id ; 
