@@ -36,3 +36,9 @@ INSERT INTO salaries VALUES
 SELECT * ,
 RANK() OVER (ORDER BY salary desc) as SALARY_ORDER
 FROM salaries; 
+
+-- Rank employees within each department based on salary (highest first).
+SELECT * ,
+RANK() OVER (PARTITION BY department ORDER BY salary desc) as SALARY_ORDER
+FROM salaries
+JOIN Employees ON salaries.employee_id = Employees.employee_id ; 
