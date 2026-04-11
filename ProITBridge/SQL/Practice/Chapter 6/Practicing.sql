@@ -73,3 +73,4 @@ begin
 end $$ 
 
 delimiter ; 
+call get_employee_sales(103);
