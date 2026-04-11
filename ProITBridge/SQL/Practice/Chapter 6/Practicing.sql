@@ -60,7 +60,16 @@ begin
     select * from sales_data;
 end $$ 
 
-
 delimiter ; 
 
 call get_all_sales();
+
+-- Employee wise sales 
+
+delimiter $$ 
+create procedure get_employee_sales(in emp_id INT)
+begin 
+    select * from sales_data where employee_id = emp_id ; 
+end $$ 
+
+delimiter ; 
