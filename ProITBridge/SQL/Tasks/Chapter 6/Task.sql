@@ -4,7 +4,7 @@
 
 CREATE DATABASE company;
 
-USE DATABASE company;
+USE company;
 
 -- CREATING TABLES 
 CREATE TABLE employees(employee_id INT PRIMARY KEY, employee_name VARCHAR(20), department VARCHAR (20));
@@ -30,3 +30,9 @@ INSERT INTO salaries VALUES
 (9,102,'2024-03',43000),
 (10,103,'2024-03',65000),
 (11,104,'2024-03',47000);
+
+
+-- Rank all employees based on their salary in descending order.
+SELECT * ,
+RANK() OVER (ORDER BY salary desc) as SALARY_ORDER
+FROM salaries; 
