@@ -45,5 +45,5 @@ JOIN employees ON salaries.employee_id = employees.employee_id ;
 
 -- Calculate the running total salary for each employee over months.
 SELECT * ,
-SUM(salary) OVER (ORDER BY salary desc) as TOTAL_SALARY
+SUM(salary) OVER (PARTITION BY employee_id ORDER BY month ) as TOTAL_SALARY
 FROM salaries;
