@@ -54,3 +54,14 @@ CREATE TABLE users (
     email VARCHAR(100) UNIQUE
 );
 
+7. What is the difference between WHERE and HAVING?
+| Clause | Used for       | Applied on         |
+| ------ | -------------- | ------------------ |
+| WHERE  | Filters rows   | Before aggregation |
+| HAVING | Filters groups | After aggregation  |
+EX :
+SELECT department, COUNT(*) 
+FROM employees
+WHERE salary > 40000
+GROUP BY department
+HAVING COUNT(*) > 2;
