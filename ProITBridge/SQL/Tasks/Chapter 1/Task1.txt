@@ -1,0 +1,10 @@
+--------- SQL Task 1 ------------------
+
+1. What is the use of the CREATE command in SQL?
+CREATE is a DDL (Data Definition Language) command used to create database objects such as tables, databases, indexes, views, and schemas.
+Ex : 
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
