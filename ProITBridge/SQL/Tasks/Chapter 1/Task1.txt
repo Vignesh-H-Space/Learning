@@ -41,3 +41,16 @@ EX :
 CREATE TABLE employees (
     id INT PRIMARY KEY
 );
+
+6. What is the difference between PRIMARY KEY and UNIQUE?
+| Feature         | PRIMARY KEY  | UNIQUE              |
+| --------------- | ------------ | ------------------- |
+| NULLs           | Not allowed  | Allowed (usually 1) |
+| Count per table | Only 1       | Multiple allowed    |
+| Purpose         | Row identity | Enforce uniqueness  |
+EX:
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE
+);
+
