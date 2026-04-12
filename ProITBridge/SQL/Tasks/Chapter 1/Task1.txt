@@ -32,3 +32,12 @@ SELECT name, salary
 FROM employees 
 WHERE salary > 50000;
 
+5. What is a PRIMARY KEY and why is it important?
+A PRIMARY KEY is a column (or set of columns) that:
+* uniquely identifies each row
+* cannot contain NULLs
+* enforces entity integrity
+EX : 
+CREATE TABLE employees (
+    id INT PRIMARY KEY
+);
