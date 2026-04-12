@@ -76,6 +76,7 @@ delimiter ;
 
 call show_salary();
 
+
 -- Get salary details for a specific employee_id
 delimiter ## 
 CREATE PROCEDURE show_salary(in emp_id INT)
@@ -89,3 +90,17 @@ END ##
 delimiter ;
 
 call show_salary(103);
+
+
+--  Get all employees from a given department
+delimiter ## 
+CREATE PROCEDURE get_employee(in dept varchar(20))
+BEGIN 
+      SELECT *
+      FROM Employees 
+      where department = dept;
+END ## 
+
+delimiter ;
+
+call get_employee("IT");
