@@ -25,3 +25,10 @@ EX:
 ALTER TABLE employees ADD salary INT;
 ALTER TABLE employees MODIFY name VARCHAR(100);
 
+4. What is the purpose of the SELECT statement?
+SELECT is used to retrieve data from one or more tables, with support for filtering, aggregation, joins, and transformations.
+EX : 
+SELECT name, salary 
+FROM employees 
+WHERE salary > 50000;
+
