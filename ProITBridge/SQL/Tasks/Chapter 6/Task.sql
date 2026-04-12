@@ -49,8 +49,8 @@ SUM(salary) OVER (PARTITION BY employee_id ORDER BY month ) as TOTAL_SALARY
 FROM salaries;
 
 -- Show each employee’s salary along with the average salary of their department.
-SELECT *,
-AVG(salary) OVER (PARTITION BY department ORDER BY salary) as AVG_Salary
-FROM salaries
-JOIN employees ON salaries.employee_id = employees.employee_id ;
+SELECT E.employee_id , E.employee_name, E.department , S.month, S.salary, 
+AVG(salary) OVER (PARTITION BY department) as AVG_Salary
+FROM salaries S
+JOIN employees E ON S.employee_id = E.employee_id ;
 
