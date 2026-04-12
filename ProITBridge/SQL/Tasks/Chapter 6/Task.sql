@@ -60,3 +60,19 @@ LAG(salary) OVER (PARTITION BY employee_id ORDER BY month) as Prev_Salary
 FROM salaries S
 JOIN employees E ON S.employee_id = E.employee_id ;
  
+
+---------- Stored Procedures -------------
+-- Show all employee salary records with employee name 
+
+delimiter ## 
+CREATE PROCEDURE show_salary()
+BEGIN 
+      SELECT E.employee_id, E.employee_name , S.month, S.salary
+      FROM salaries S 
+      JOIN Employees E ON S.employee_id = E.employee_id ;
+END ## 
+
+delimiter ;
+
+call show_salary();
+
