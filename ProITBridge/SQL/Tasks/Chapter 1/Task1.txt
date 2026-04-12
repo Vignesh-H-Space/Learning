@@ -17,6 +17,11 @@ CREATE TABLE employees (
 | Speed     | Slow                  | Faster           |
 Ex:
 DROP TABLE employees; -- deletes table completely
-
 TRUNCATE TABLE employees; -- deletes all rows, keeps table
+
+3. What does the ALTER command do in SQL?
+ALTER is used to modify the structure of an existing database object, such as adding, deleting, or modifying columns.
+EX: 
+ALTER TABLE employees ADD salary INT;
+ALTER TABLE employees MODIFY name VARCHAR(100);
 
