@@ -8,3 +8,15 @@ CREATE TABLE employees (
     name VARCHAR(50)
 );
 
+2. What is the difference between DROP and TRUNCATE?
+| Feature   | DROP                  | TRUNCATE         |
+| --------- | --------------------- | ---------------- |
+| Action    | Deletes entire object | Deletes all rows |
+| Structure | Removed               | Kept             |
+| Rollback  | No (mostly)           | No (in many DBs) |
+| Speed     | Slow                  | Faster           |
+Ex:
+DROP TABLE employees; -- deletes table completely
+
+TRUNCATE TABLE employees; -- deletes all rows, keeps table
+
