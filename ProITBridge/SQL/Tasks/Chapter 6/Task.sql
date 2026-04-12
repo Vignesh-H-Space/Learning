@@ -51,4 +51,6 @@ FROM salaries;
 -- Show each employee’s salary along with the average salary of their department.
 SELECT *,
 AVG(salary) OVER (PARTITION BY department ORDER BY salary) as AVG_Salary
-FROM salaries;
+FROM salaries
+JOIN employees ON salaries.employee_id = employees.employee_id ;
+
