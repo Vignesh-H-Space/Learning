@@ -54,3 +54,9 @@ AVG(salary) OVER (PARTITION BY department) as AVG_Salary
 FROM salaries S
 JOIN employees E ON S.employee_id = E.employee_id ;
 
+-- Display current salary and previous month’s salary for each employee.
+SELECT E.employee_id , E.employee_name, E.department , S.month, S.salary,
+LAG(salary) OVER (PARTITION BY employee_id ORDER BY month) as Prev_Salary
+FROM salaries S
+JOIN employees E ON S.employee_id = E.employee_id ;
+ 
