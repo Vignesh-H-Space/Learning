@@ -76,3 +76,16 @@ delimiter ;
 
 call show_salary();
 
+-- Get salary details for a specific employee_id
+delimiter ## 
+CREATE PROCEDURE show_salary(in emp_id INT)
+BEGIN 
+      SELECT E.employee_id, E.employee_name , S.month, S.salary
+      FROM salaries S 
+      JOIN Employees E ON S.employee_id = E.employee_id 
+      where E.employee_id = emp_id;
+END ## 
+
+delimiter ;
+
+call show_salary(103);
