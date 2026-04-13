@@ -65,3 +65,11 @@ FROM employees
 WHERE salary > 40000
 GROUP BY department
 HAVING COUNT(*) > 2;
+
+8. What is an INNER JOIN and what kind of rows does it return?
+INNER JOIN` returns only matching rows between two tables based the condition given. 
+EX :
+SELECT e.name, s.salary
+FROM employees e
+INNER JOIN salaries s
+ON e.id = s.employee_id;
