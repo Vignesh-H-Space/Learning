@@ -84,3 +84,12 @@ FROM (
     FROM sales_data
 ) t
 WHERE rnk = 1;
+
+-- Find Second Highest Sales per Month
+SELECT *
+FROM (
+    SELECT *,
+           DENSE_RANK() OVER (PARTITION BY month ORDER BY sales_amount DESC) AS rnk
+    FROM sales_data
+) t
+WHERE rnk = 2;
