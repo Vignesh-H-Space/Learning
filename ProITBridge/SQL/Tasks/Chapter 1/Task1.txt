@@ -67,9 +67,16 @@ GROUP BY department
 HAVING COUNT(*) > 2;
 
 8. What is an INNER JOIN and what kind of rows does it return?
-INNER JOIN` returns only matching rows between two tables based the condition given. 
+INNER JOIN returns only matching rows between two tables based the condition, It returns only the intersection of the datasets. By default, JOIN in SQL is Inner Join in nature.
 EX :
 SELECT e.name, s.salary
 FROM employees e
 INNER JOIN salaries s
 ON e.id = s.employee_id;
+
+9. What is the use of GROUP BY in SQL?
+GROUP BY is used to aggregate data across groups of rows sharing common column values
+Ex :
+SELECT department, AVG(salary)
+FROM employees
+GROUP BY department;
