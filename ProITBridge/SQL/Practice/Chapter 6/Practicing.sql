@@ -74,3 +74,13 @@ end $$
 
 delimiter ; 
 call get_employee_sales(103);
+
+
+-- Get the employee with the highest sales in each month.
+SELECT *
+FROM (
+    SELECT *,
+           RANK() OVER (PARTITION BY month ORDER BY sales_amount DESC) AS rnk
+    FROM sales_data
+) t
+WHERE rnk = 1;
