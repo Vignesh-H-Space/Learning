@@ -80,3 +80,20 @@ Ex :
 SELECT department, AVG(salary)
 FROM employees
 GROUP BY department;
+
+10. What is the difference between PRIMARY KEY and FOREIGN KEY ?
+| Feature  | PRIMARY KEY           | FOREIGN KEY            |
+| -------- | --------------------- | ---------------------- |
+| Purpose  | Unique row identifier | Maintains relationship |
+| Location | Parent table          | Child table            |
+| Values   | Unique                | Can repeat             |
+Ex : 
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY
+);
+
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)
+);
