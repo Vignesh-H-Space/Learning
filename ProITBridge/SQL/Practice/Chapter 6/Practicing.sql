@@ -139,3 +139,6 @@ END $$
 
 DELIMITER ;
 
+SET @b = 500;
+CALL update_bonus(@b);
+SELECT @b;
