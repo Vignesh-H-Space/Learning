@@ -126,3 +126,16 @@ DELIMITER ;
 
 CALL get_total_sales(@result);
 SELECT @result;
+
+
+-- Procedure with INOUT Parameter
+
+DELIMITER $$
+
+CREATE PROCEDURE update_bonus(INOUT bonus DECIMAL(10,2))
+BEGIN
+    SET bonus = bonus + 100;
+END $$
+
+DELIMITER ;
+
