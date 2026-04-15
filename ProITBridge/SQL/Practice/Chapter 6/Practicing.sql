@@ -103,3 +103,8 @@ FROM sales_data;
 SELECT *,
 ROW_NUMBER() OVER (ORDER BY sales_amount DESC) AS row_num
 FROM sales_data;
+
+-- Shows cumulative distribution (percentage ranking)
+SELECT *,
+CUME_DIST() OVER (ORDER BY sales_amount DESC) AS cum_dist
+FROM sales_data;
