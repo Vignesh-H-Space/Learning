@@ -113,3 +113,13 @@ FROM sales_data;
 SELECT *,
 PERCENT_RANK() OVER (ORDER BY sales_amount DESC) AS percent_rank
 FROM sales_data;
+
+--  Procedure with OUT Parameter
+DELIMITER $$
+
+CREATE PROCEDURE get_total_sales(OUT total DECIMAL(10,2))
+BEGIN
+    SELECT SUM(sales_amount) INTO total FROM sales_data;
+END $$
+
+DELIMITER ;
