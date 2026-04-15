@@ -142,3 +142,20 @@ DELIMITER ;
 SET @b = 500;
 CALL update_bonus(@b);
 SELECT @b;
+
+
+-- Loop Procedure
+
+DELIMITER $$
+
+CREATE PROCEDURE count_numbers()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+
+    WHILE i <= 5 DO
+        SELECT i;
+        SET i = i + 1;
+    END WHILE;
+END $$
+
+DELIMITER ;
