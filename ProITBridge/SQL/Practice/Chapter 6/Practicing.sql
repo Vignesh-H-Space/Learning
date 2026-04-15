@@ -98,3 +98,8 @@ WHERE rnk = 2;
 SELECT *,
 NTILE(3) OVER (ORDER BY sales_amount DESC) AS bucket
 FROM sales_data;
+
+-- Top-N filtering (like top 3 sales)
+SELECT *,
+ROW_NUMBER() OVER (ORDER BY sales_amount DESC) AS row_num
+FROM sales_data;
