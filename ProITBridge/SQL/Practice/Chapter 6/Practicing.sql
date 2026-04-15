@@ -108,3 +108,8 @@ FROM sales_data;
 SELECT *,
 CUME_DIST() OVER (ORDER BY sales_amount DESC) AS cum_dist
 FROM sales_data;
+
+-- Relative rank between 0 and 1
+SELECT *,
+PERCENT_RANK() OVER (ORDER BY sales_amount DESC) AS percent_rank
+FROM sales_data;
