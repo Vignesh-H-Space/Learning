@@ -93,3 +93,8 @@ FROM (
     FROM sales_data
 ) t
 WHERE rnk = 2;
+
+-- Divide employees into performance tiers
+SELECT *,
+NTILE(3) OVER (ORDER BY sales_amount DESC) AS bucket
+FROM sales_data;
