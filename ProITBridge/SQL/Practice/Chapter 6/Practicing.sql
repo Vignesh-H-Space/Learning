@@ -123,3 +123,6 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+CALL get_total_sales(@result);
+SELECT @result;
