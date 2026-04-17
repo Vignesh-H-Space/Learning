@@ -12,8 +12,10 @@
 
 income = float(input("Enter the annual income: "))
 
+if (income < 0):
+    tax = 0.0
 
-if (income < 85528):
+elif (income < 85528):
     tax = (income * 0.18) - 556
 else:
     tax = ((income - 85528) * 0.32) + 14839
