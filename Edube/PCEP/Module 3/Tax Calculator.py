@@ -10,3 +10,13 @@
 # Next, it should print the calculated tax, rounded to full thalers. There's a function named round() which will do the rounding for you - you'll find it in the skeleton code in the editor.
 # Note: this happy country never returns money to its citizens. If the calculated tax is less than zero, it only means no tax at all (the tax is equal to zero). Take this into consideration during your calculations.
 
+income = float(input("Enter the annual income: "))
+
+
+if (income < 85528):
+    tax = (income * 0.18) - 556
+else:
+    tax = ((income - 85528) * 0.32) + 14839
+
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
