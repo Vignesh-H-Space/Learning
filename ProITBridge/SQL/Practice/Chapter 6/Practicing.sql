@@ -159,3 +159,13 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+
+-- Top 2 Sales Per Month
+SELECT *
+FROM (
+    SELECT *,
+           DENSE_RANK() OVER (PARTITION BY month ORDER BY sales_amount DESC) AS rnk
+    FROM sales_data
+) t
+WHERE rnk <= 2;
