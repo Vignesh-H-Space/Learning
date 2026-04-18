@@ -180,3 +180,11 @@ SELECT *,
 sales_amount * 100.0 /
 SUM(sales_amount) OVER (PARTITION BY month) AS percentage_share
 FROM sales_data;
+
+-- Window Frame with RANGE
+SELECT *,
+SUM(sales_amount) OVER (
+    ORDER BY sales_amount
+    RANGE BETWEEN 100 PRECEDING AND CURRENT ROW
+) AS range_sum
+FROM sales_data;
