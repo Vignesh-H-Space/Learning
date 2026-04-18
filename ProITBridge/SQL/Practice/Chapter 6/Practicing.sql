@@ -230,3 +230,14 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+-- Procedure Returning Multiple Results
+DELIMITER $$
+
+CREATE PROCEDURE multi_result()
+BEGIN
+    SELECT * FROM sales_data;
+    SELECT SUM(sales_amount) AS total_sales FROM sales_data;
+END $$
+
+DELIMITER ;
