@@ -169,3 +169,8 @@ FROM (
     FROM sales_data
 ) t
 WHERE rnk <= 2;
+
+-- Running Average Per Employee
+SELECT *,
+       AVG(sales_amount) OVER (PARTITION BY employee_id ORDER BY month) AS running_avg
+FROM sales_data;
