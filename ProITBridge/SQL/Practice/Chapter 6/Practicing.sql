@@ -188,3 +188,9 @@ SUM(sales_amount) OVER (
     RANGE BETWEEN 100 PRECEDING AND CURRENT ROW
 ) AS range_sum
 FROM sales_data;
+
+--Conditional Window Aggregation
+SELECT *,
+SUM(CASE WHEN sales_amount > 600 THEN sales_amount ELSE 0 END)
+OVER (PARTITION BY month) AS high_sales_sum
+FROM sales_data;
