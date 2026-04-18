@@ -194,3 +194,24 @@ SELECT *,
 SUM(CASE WHEN sales_amount > 600 THEN sales_amount ELSE 0 END)
 OVER (PARTITION BY month) AS high_sales_sum
 FROM sales_data;
+
+-- Procedure with IF Condition
+DELIMITER $$
+
+CREATE PROCEDURE check_sales(IN emp_id INT)
+BEGIN
+    DECLARE total DECIMAL(10,2);
+
+    SELECT SUM(sales_amount) INTO total
+    FROM sales_data
+    WHERE employee_id = emp_id;
+
+    IF total > 1500 THEN
+        SELECT 'High Performer' AS status;
+    ELSE
+        SELECT 'Needs Improvement' AS status;
+    END IF;
+
+END $$
+
+DELIMITER ;
