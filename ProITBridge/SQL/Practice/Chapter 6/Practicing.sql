@@ -174,3 +174,9 @@ WHERE rnk <= 2;
 SELECT *,
        AVG(sales_amount) OVER (PARTITION BY employee_id ORDER BY month) AS running_avg
 FROM sales_data;
+
+-- Percentage Contribution per Month
+SELECT *,
+sales_amount * 100.0 /
+SUM(sales_amount) OVER (PARTITION BY month) AS percentage_share
+FROM sales_data;
