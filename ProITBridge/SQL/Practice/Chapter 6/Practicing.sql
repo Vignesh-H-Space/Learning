@@ -215,3 +215,18 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+-- Procedure with CASE
+DELIMITER $$
+
+CREATE PROCEDURE categorize_sales(IN amount DECIMAL(10,2))
+BEGIN
+    SELECT 
+    CASE
+        WHEN amount >= 700 THEN 'Excellent'
+        WHEN amount >= 500 THEN 'Good'
+        ELSE 'Average'
+    END AS category;
+END $$
+
+DELIMITER ;
