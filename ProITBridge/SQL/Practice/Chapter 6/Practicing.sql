@@ -275,3 +275,8 @@ sales_amount - LAG(sales_amount) OVER (
     PARTITION BY employee_id ORDER BY month
 ) AS difference
 FROM sales_data;
+
+-- Window Count (within partition)
+SELECT *,
+COUNT(*) OVER (PARTITION BY month) AS total_transactions_in_month
+FROM sales_data;
