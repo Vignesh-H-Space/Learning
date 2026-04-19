@@ -259,3 +259,12 @@ LAST_VALUE(sales_amount) OVER (
     ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
 ) AS lowest_in_month
 FROM sales_data;
+
+-- Get the “nth” value
+SELECT *,
+NTH_VALUE(sales_amount, 2) OVER (
+    PARTITION BY month 
+    ORDER BY sales_amount DESC
+    ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+) AS second_highest
+FROM sales_data;
