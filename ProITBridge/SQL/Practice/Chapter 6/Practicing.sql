@@ -286,3 +286,11 @@ SELECT *,
 MAX(sales_amount) OVER (PARTITION BY employee_id) AS max_sales,
 MIN(sales_amount) OVER (PARTITION BY employee_id) AS min_sales
 FROM sales_data;
+
+-- Window Frame with ROWS
+SELECT *,
+SUM(sales_amount) OVER (
+    ORDER BY month
+    ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+) AS last_3_rows_sum
+FROM sales_data;
