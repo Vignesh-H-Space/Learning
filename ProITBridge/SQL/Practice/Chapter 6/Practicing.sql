@@ -250,3 +250,12 @@ FIRST_VALUE(sales_amount) OVER (
     ORDER BY sales_amount DESC
 ) AS highest_in_month
 FROM sales_data;
+
+-- Get the last value in a partition
+SELECT *,
+LAST_VALUE(sales_amount) OVER (
+    PARTITION BY month 
+    ORDER BY sales_amount
+    ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+) AS lowest_in_month
+FROM sales_data;
