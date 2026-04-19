@@ -294,3 +294,14 @@ SUM(sales_amount) OVER (
     ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
 ) AS last_3_rows_sum
 FROM sales_data;
+
+
+-- Procedure with ERROR Handling
+DELIMITER $$
+
+CREATE PROCEDURE safe_insert(
+    IN t_id INT,
+    IN emp_id INT,
+    IN m VARCHAR(7),
+    IN amt DECIMAL(10,2)
+)
