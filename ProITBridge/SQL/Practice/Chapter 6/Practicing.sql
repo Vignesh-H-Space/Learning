@@ -241,3 +241,12 @@ BEGIN
 END $$
 
 DELIMITER ;
+
+
+--- Get the first value in a partition
+SELECT *,
+FIRST_VALUE(sales_amount) OVER (
+    PARTITION BY month 
+    ORDER BY sales_amount DESC
+) AS highest_in_month
+FROM sales_data;
