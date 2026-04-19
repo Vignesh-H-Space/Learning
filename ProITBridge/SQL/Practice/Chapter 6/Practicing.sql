@@ -268,3 +268,10 @@ NTH_VALUE(sales_amount, 2) OVER (
     ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
 ) AS second_highest
 FROM sales_data;
+
+-- Difference Between Current and Previous Row
+SELECT *,
+sales_amount - LAG(sales_amount) OVER (
+    PARTITION BY employee_id ORDER BY month
+) AS difference
+FROM sales_data;
