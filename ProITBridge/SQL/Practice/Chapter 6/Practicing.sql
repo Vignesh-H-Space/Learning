@@ -280,3 +280,9 @@ FROM sales_data;
 SELECT *,
 COUNT(*) OVER (PARTITION BY month) AS total_transactions_in_month
 FROM sales_data;
+
+-- Max / Min per Partition (without GROUP BY)
+SELECT *,
+MAX(sales_amount) OVER (PARTITION BY employee_id) AS max_sales,
+MIN(sales_amount) OVER (PARTITION BY employee_id) AS min_sales
+FROM sales_data;
