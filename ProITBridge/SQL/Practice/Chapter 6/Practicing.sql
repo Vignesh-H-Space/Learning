@@ -305,3 +305,11 @@ CREATE PROCEDURE safe_insert(
     IN m VARCHAR(7),
     IN amt DECIMAL(10,2)
 )
+BEGIN
+    DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+    SELECT 'Error occurred during insert';
+
+    INSERT INTO sales_data VALUES (t_id, emp_id, m, amt);
+END $$
+
+DELIMITER ;
