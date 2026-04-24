@@ -4,7 +4,7 @@
 
 # Your task is to write a program which reads the number of blocks the builders have, and outputs the height of the pyramid that can be built using these blocks.
 
-# ote: the height is measured by the number of fully completed layers - if the builders don't have a sufficient number of blocks and cannot complete the next # layer, they finish their work immediately.
+# Note: the height is measured by the number of fully completed layers - if the builders don't have a sufficient number of blocks and cannot complete the next # layer, they finish their work immediately.
 
 # Sample input: 6
 # Expected output: The height of the pyramid: 3
@@ -19,14 +19,6 @@
 # Expected output: The height of the pyramid: 1
 
 
-# 1 - 1 , 2 - 3 , 3 - 6, 4 - 10, 5 - 15
-1
-3
-6
-10
-15
-21
-
 size = int(input("Enter the size of "))
 num = 1
 while True:
@@ -34,4 +26,4 @@ while True:
         break
     else:
         num+=1
-print(num)
+print("The height of the pyramid:",num-1)
