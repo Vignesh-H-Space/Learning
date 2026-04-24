@@ -26,9 +26,12 @@
 10
 15
 21
+
 size = int(input("Enter the size of "))
-num = 0 
-val = 1
+num = 1
 while True:
-    if num <= size :
-        val+=1
+    if (num * (num + 1 ) / 2 ) > size :
+        break
+    else:
+        num+=1
+print(num)
