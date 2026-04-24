@@ -21,9 +21,6 @@
 
 size = int(input("Enter the size of "))
 num = 1
-while True:
-    if (num * (num + 1 ) / 2 ) > size :
-        break
-    else:
+while (num * (num + 1 ) // 2 ) <= size: 
         num+=1
 print("The height of the pyramid:",num-1)
