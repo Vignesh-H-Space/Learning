@@ -51,12 +51,8 @@ if num < 1:
 else:
     val = 0
     while num != 1:
-        if num % 2 == 0:
-            num //= 2 
-            print(num)
-        else: 
-            num = 3 * num + 1
-            print(num)
+        num = num //2 if num % 2 == 0 else 3 * num + 1 
+        print(num)
         val+=1
     print("Steps = ",val)   
         
