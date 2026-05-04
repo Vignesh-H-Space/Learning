@@ -25,9 +25,21 @@ def show():
         if (i + 1) % 3 == 0:
             print()
 
+def check(player):
+    wins = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+    ]
+    return any(all(board[i] == player for i in w) for w in wins)
+
 while True:
     show()
     move("X")
     show()
     move("O")
+    if check("X"):
+        show()
+    print("X wins!")
+    break
     
