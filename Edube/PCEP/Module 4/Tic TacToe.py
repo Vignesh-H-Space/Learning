@@ -33,6 +33,10 @@ def check(player):
     ]
     return any(all(board[i] == player for i in w) for w in wins)
 
+if " " not in board:
+    show()
+    print("It's a draw!")
+
 while True:
     show()
     move("X")
