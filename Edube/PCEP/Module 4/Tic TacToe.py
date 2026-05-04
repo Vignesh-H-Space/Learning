@@ -19,8 +19,15 @@ def move(player):
         except:
             print("Enter a number!")
 
+def show():
+    for i in range(9):
+        print(board[i] if board[i] != " " else i+1, end=" ")
+        if (i + 1) % 3 == 0:
+            print()
+
 while True:
     show()
     move("X")
     show()
     move("O")
+    
