@@ -6,9 +6,18 @@ def show():
     print(board[6], board[7], board[8])
 
 def move(player):
-    pos = int(input("Choose 1-9: ")) - 1
-    if board[pos] == " ":
-        board[pos] = player
+    while True:
+        try:
+            pos = int(input(f"{player} choose 1-9: ")) - 1
+            if pos < 0 or pos > 8:
+                print("Invalid range!")
+            elif board[pos] != " ":
+                print("Already taken!")
+            else:
+                board[pos] = player
+                break
+        except:
+            print("Enter a number!")
 
 while True:
     show()
