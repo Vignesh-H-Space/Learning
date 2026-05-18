@@ -1,17 +1,24 @@
 import pygame
 
-run = True
-width = 400
-height = 100
+# Initialize pygame
 pygame.init()
-screen = pygame.display.set_mode((width, height))
-font = pygame.font.SysFont(None, 48)
-text = font.render("Welcome to pygame", True, (255, 255, 255))
-screen.blit(text, ((width - text.get_width()) // 2, (height - text.get_height()) // 2))
-pygame.display.flip()
-while run:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT\
-                    or event.type == pygame.MOUSEBUTTONUP\
-        or event.type == pygame.KEYUP:
-            run = False
+
+# Window settings
+WIDTH, HEIGHT = 500, 150
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Welcome")
+
+# Colors
+BG_COLOR = (30, 30, 40)
+TEXT_COLOR = (255, 255, 255)
+
+# Font
+font = pygame.font.SysFont("arial", 42)
+
+# Text
+text = font.render("Welcome to Pygame", True, TEXT_COLOR)
+text_rect = text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+
+# Main loop
+running = True
+clock = pygame.time.Clock()
