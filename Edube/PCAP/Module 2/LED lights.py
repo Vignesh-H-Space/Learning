@@ -23,3 +23,13 @@ def display_led_number(number_str):
             # Convert the character (e.g., '1') to an integer index (e.g., 1)
             digit_index = int(char)
             
+            # Fetch the specific row part for this digit and add it to our line
+            # We add a space " " at the end to separate the digits
+            line += digits[digit_index][row_index] + " "
+            
+        # Print the fully built row before moving to the next row
+        print(line)
+
+# Test cases
+user_input = input("Enter a non-negative integer: ")
+display_led_number(user_input)
