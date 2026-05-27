@@ -13,6 +13,16 @@ def mysplit(strng):
             if current_word != "":
                 result.append(current_word)
                 current_word = "" # Reset the builder for the next word
+        else:
+            # If it's not a space, add the letter to our current word builder
+            current_word += char
+            
+    # After the loop finishes, check if there is one last word left in the builder
+    if current_word != "":
+        result.append(current_word)
+        
+    return result
+
 
 # Test cases
 print(mysplit("To be or not to be, that is the question"))
