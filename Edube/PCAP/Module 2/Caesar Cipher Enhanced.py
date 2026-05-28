@@ -29,6 +29,18 @@ for char in text:
         else:
             base = ord('a')
             
+        # The Math: 
+        # 1. Find the letter's position from 0-25 (ord(char) - base)
+        # 2. Add the shift
+        # 3. Use Modulo 26 (% 26) to wrap around if it goes past 'z'
+        # 4. Add the base back to get the real ASCII value
+        new_char_code = (ord(char) - base + shift) % 26 + base
+        
+        # Convert the new ASCII number back to a letter and add to cipher
+        cipher += chr(new_char_code)
+    else:
+        # If it's a space, number, or punctuation, just drop it in unchanged
+        cipher += char
 
 # Step 4: Print the final result
 print(cipher)
