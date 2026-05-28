@@ -17,3 +17,18 @@ while True:
         # If int() fails (e.g., they typed "apple" or "2.5"), catch the crash
         print("Error: Invalid input. Please enter a whole number.")
 
+# Step 3: Encrypt the text
+cipher = ""
+
+for char in text:
+    # Check if the character is a letter
+    if char.isalpha():
+        # Determine the math base depending on upper or lower case
+        if char.isupper():
+            base = ord('A')
+        else:
+            base = ord('a')
+            
+
+# Step 4: Print the final result
+print(cipher)
