@@ -18,3 +18,17 @@ text = input("Enter the combination of characters: ").upper()
 # Step 2: Initialize variables
 is_hidden = True
 start_index = 0
+
+# Step 3: Loop through each character in the target word
+for char in word:
+    # Use the two-argument find() to search starting from our current position
+    found_index = text.find(char, start_index)
+    
+    if found_index == -1:
+        # The character was not found in the remaining text
+        is_hidden = False
+        break
+    
+    # Update the start_index so the next letter search begins 
+    # strictly AFTER the letter we just found
+    start_index = found_index + 1
