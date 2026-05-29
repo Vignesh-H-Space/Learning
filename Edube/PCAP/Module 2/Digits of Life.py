@@ -10,3 +10,9 @@
 # asks the user her/his birthday (in the format YYYYMMDD, or YYYYDDMM, or MMDDYYYY - actually, the order of the digits doesn't matter)
 # outputs the Digit of Life for the date.
 
+# Step 1: Ask the user for their birthday
+date_str = input("Enter your birthday (in digits): ")
+
+# Clean the input just in case they added spaces
+date_str = date_str.replace(" ", "")
+
