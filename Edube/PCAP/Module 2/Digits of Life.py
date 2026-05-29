@@ -25,3 +25,9 @@ while len(date_str) > 1:
     for char in date_str:
         # Convert the text character to a math number and add it to our total
         current_sum += int(char)
+        
+    # Step 4: Convert the math sum BACK to a string so the while loop can check its length
+    date_str = str(current_sum)
+
+# Step 5: Print the final single digit
+print(date_str)
