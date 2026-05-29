@@ -10,3 +10,11 @@
 
 # you should use the two-argument variants of the pos() functions inside your code;
 # don't worry about case sensitivity.
+
+# Step 1: Get user inputs
+word = input("Enter the word: ").upper()
+text = input("Enter the combination of characters: ").upper()
+
+# Step 2: Initialize variables
+is_hidden = True
+start_index = 0
