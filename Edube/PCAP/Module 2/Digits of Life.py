@@ -16,3 +16,12 @@ date_str = input("Enter your birthday (in digits): ")
 # Clean the input just in case they added spaces
 date_str = date_str.replace(" ", "")
 
+# Step 2: Create a loop that keeps running as long as we have more than 1 digit
+while len(date_str) > 1:
+    
+    current_sum = 0
+    
+    # Step 3: Loop through every individual character in the string
+    for char in date_str:
+        # Convert the text character to a math number and add it to our total
+        current_sum += int(char)
