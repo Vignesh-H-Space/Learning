@@ -32,3 +32,9 @@ for char in word:
     # Update the start_index so the next letter search begins 
     # strictly AFTER the letter we just found
     start_index = found_index + 1
+    
+# Step 4: Print the final result
+if is_hidden:
+    print("Yes")
+else:
+    print("No")
