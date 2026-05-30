@@ -17,3 +17,5 @@ try:
 except ValueError:
     print("Please enter numbers only!")
 
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
