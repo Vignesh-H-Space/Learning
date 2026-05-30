@@ -7,3 +7,4 @@ try:
     if age < 0:
         raise NegativeAgeError("Age cannot be negative")
 
+    print("Age accepted")
