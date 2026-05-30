@@ -8,3 +8,6 @@ try:
         raise NegativeAgeError("Age cannot be negative")
 
     print("Age accepted")
+
+except NegativeAgeError as e:
+    print(e)
