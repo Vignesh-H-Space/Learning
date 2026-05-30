@@ -7,3 +7,6 @@ try:
 
 except FileNotFoundError:
     print("File does not exist!")
+
+except PermissionError:
+    print("Permission denied!")
