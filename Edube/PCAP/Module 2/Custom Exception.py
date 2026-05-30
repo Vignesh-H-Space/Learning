@@ -3,3 +3,7 @@ class NegativeAgeError(Exception):
 
 try:
     age = int(input("Age: "))
+
+    if age < 0:
+        raise NegativeAgeError("Age cannot be negative")
+
