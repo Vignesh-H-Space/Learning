@@ -5,3 +5,7 @@ class Queue:
     def enqueue(self, item):
         self.items.append(item)
 
+q = Queue()
+q.enqueue("A")
+q.enqueue("B")
+print(q.items)
