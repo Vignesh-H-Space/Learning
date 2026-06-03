@@ -5,3 +5,6 @@ class Stack:
     def pop_item(self):
         return self.data.pop()
 
+s = Stack()
+print(s.pop_item())
+print(s.data)
