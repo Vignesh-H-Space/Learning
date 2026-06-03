@@ -5,3 +5,7 @@ class Stack:
     def push(self, item):
         self.items.append(item)
 
+s = Stack()
+s.push(10)
+s.push(20)
+print(s.items)
