@@ -6,3 +6,4 @@ for item in stack:
     if item > max_num:
         max_num = item
 
+print("Maximum:", max_num)
