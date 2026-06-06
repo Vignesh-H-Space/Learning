@@ -4,3 +4,5 @@ max_num = stack[0]
 
 for item in stack:
     if item > max_num:
+        max_num = item
+
