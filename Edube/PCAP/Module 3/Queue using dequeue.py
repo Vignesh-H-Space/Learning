@@ -5,3 +5,6 @@ class Queue:
     def dequeue(self):
         return self.items.pop(0)
 
+q = Queue()
+print(q.dequeue())
+print(q.items)
