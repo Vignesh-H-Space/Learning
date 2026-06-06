@@ -6,3 +6,5 @@ stack = []
 while queue:
     stack.append(queue.popleft())
 
+while stack:
+    queue.append(stack.pop())
