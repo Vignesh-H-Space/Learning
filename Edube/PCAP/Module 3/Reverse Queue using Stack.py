@@ -8,3 +8,5 @@ while queue:
 
 while stack:
     queue.append(stack.pop())
+
+print(queue)
