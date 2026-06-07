@@ -12,3 +12,5 @@ for num in queue:
     else:
         odd += 1
 
+print("Even =", even)
+print("Odd =", odd)
