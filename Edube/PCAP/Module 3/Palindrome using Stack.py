@@ -10,3 +10,7 @@ reversed_text = ""
 while stack:
     reversed_text += stack.pop()
 
+if text == reversed_text:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
