@@ -7,3 +7,7 @@ for ch in text:
 
 reversed_string = ""
 
+while stack:
+    reversed_string += stack.pop()
+
+print("Reversed String:", reversed_string)
