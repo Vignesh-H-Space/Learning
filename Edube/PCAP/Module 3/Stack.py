@@ -18,3 +18,6 @@ class AddingStack(Stack):
     def get_sum(self):
         return self.__sum
 
+    def push(self, val):
+        self.__sum += val
+        Stack.push(self, val)
