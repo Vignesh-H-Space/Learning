@@ -26,3 +26,9 @@ class AddingStack(Stack):
         val = Stack.pop(self)
         self.__sum -= val
         return val
+    
+stack_object = AddingStack()
+
+for i in range(5):
+    stack_object.push(i)
+print(stack_object.get_sum())
