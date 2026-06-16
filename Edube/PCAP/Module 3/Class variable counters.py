@@ -4,3 +4,6 @@ class ExampleClass:
         self.__first = val
         ExampleClass.counter += 1
 
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
