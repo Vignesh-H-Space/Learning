@@ -8,5 +8,8 @@ class ExampleClass:
 example_object = ExampleClass(1)
 
 print(example_object.a)
-print(example_object.b)
 
+try:
+    print(example_object.b)
+except AttributeError:
+    pass
