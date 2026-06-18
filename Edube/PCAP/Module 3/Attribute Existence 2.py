@@ -9,4 +9,5 @@ example_object = ExampleClass()
 print(hasattr(example_object, 'b'))
 print(hasattr(example_object, 'a'))
 
-
+print(hasattr(ExampleClass, 'b'))
+print(hasattr(ExampleClass, 'a'))
