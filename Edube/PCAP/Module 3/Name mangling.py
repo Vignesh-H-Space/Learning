@@ -6,4 +6,7 @@ class Classy:
         print("hidden")
 
 
+obj = Classy()
+obj.visible()
+
 
