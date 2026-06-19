@@ -11,3 +11,5 @@ obj.integer = 4
 obj.z = 5
 
 
+def incIntsI(obj):
+    for name in obj.__dict__.keys():
