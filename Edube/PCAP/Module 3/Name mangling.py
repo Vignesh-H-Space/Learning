@@ -9,4 +9,10 @@ class Classy:
 obj = Classy()
 obj.visible()
 
+try:
+    obj.__hidden()
+except:
+    print("failed")
+
+obj._Classy__hidden()
 
