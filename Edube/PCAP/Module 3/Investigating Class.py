@@ -15,3 +15,7 @@ def incIntsI(obj):
     for name in obj.__dict__.keys():
         if name.startswith('i'):
             val = getattr(obj, name)
+            if isinstance(val, int):
+                setattr(obj, name, val + 1)
+
+
