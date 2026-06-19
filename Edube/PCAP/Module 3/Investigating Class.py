@@ -13,3 +13,5 @@ obj.z = 5
 
 def incIntsI(obj):
     for name in obj.__dict__.keys():
+        if name.startswith('i'):
+            val = getattr(obj, name)
