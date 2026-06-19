@@ -20,3 +20,5 @@ def incIntsI(obj):
 
 
 print(obj.__dict__)
+incIntsI(obj)
+print(obj.__dict__)
