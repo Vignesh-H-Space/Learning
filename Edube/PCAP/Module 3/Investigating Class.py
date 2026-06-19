@@ -19,3 +19,4 @@ def incIntsI(obj):
                 setattr(obj, name, val + 1)
 
 
+print(obj.__dict__)
