@@ -14,3 +14,10 @@ def analyze_stress(signal):
     elif level < 50:
         state = "Feeble Voice"
 
+    elif level < 125:
+        state = "Normal Voice"
+
+    else:
+        state = "High Voice"
+
+    return state
