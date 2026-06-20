@@ -6,4 +6,5 @@ def analyze_stress(signal):
 
     rms = np.sqrt(np.mean(signal**2))
 
- 
+    level = rms*10000
+
