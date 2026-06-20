@@ -8,3 +8,9 @@ def analyze_stress(signal):
 
     level = rms*10000
 
+    if level < 1:
+        state = "Silent"
+
+    elif level < 50:
+        state = "Feeble Voice"
+
