@@ -9,3 +9,8 @@ b2.value += 5
 
 print(b1.value)
 print(b2.value)
+
+b1.value += 10
+
+print(b1.value)
+print(b2.value)
