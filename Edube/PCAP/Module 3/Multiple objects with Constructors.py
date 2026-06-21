@@ -11,3 +11,8 @@ c2 = Car("Audi")
 
 c1.accelerate()
 c1.accelerate()
+
+c2.accelerate()
+
+print(c1.brand, c1.speed)
+print(c2.brand, c2.speed)
