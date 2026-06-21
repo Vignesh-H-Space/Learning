@@ -6,3 +6,8 @@ class Car:
     def accelerate(self):
         self.speed += 20
 
+c1 = Car("BMW")
+c2 = Car("Audi")
+
+c1.accelerate()
+c1.accelerate()
