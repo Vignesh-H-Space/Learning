@@ -11,3 +11,7 @@ class Book:
         else:
             print(f"{self.title} is unavailable")
 
+    def return_book(self):
+        self.available = True
+        print(f"{self.title} returned")
+
