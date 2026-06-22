@@ -15,3 +15,10 @@ class Book:
         self.available = True
         print(f"{self.title} returned")
 
+
+python_book = Book("Python Basics")
+
+python_book.borrow()
+python_book.borrow()
+python_book.return_book()
+python_book.borrow()
