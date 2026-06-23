@@ -8,3 +8,5 @@ class Student:
         print("Name:", self.name)
         print("Marks:", self.marks)
 
+s1 = Student("Rahul", 85)
+s1.display()
