@@ -4,3 +4,7 @@ class Student:
         self.name = name
         self.marks = marks
 
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+
