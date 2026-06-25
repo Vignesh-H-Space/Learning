@@ -10,3 +10,9 @@ class Cat(Animal):
     def sound(self):
         print("Cat meows")
 
+
+d = Dog()
+c = Cat()
+
+d.sound()
+c.sound()
