@@ -10,3 +10,8 @@ class BankAccount:
 
     def show_balance(self):
         print("Balance =", self.balance)
+        
+acc = BankAccount(5000)
+acc.deposit(1000)
+acc.withdraw(2000)
+acc.show_balance()
