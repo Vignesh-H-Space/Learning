@@ -7,3 +7,6 @@ class BankAccount:
         
     def withdraw(self, amount):
         self.balance -= amount
+
+    def show_balance(self):
+        print("Balance =", self.balance)
