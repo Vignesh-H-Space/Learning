@@ -9,3 +9,10 @@ class Dog:
 
 dog1 = Dog("Fido")
 dog2 = Dog("Buddy")
+
+dog1.add_trick("Roll over")
+dog2.add_trick("Play dead")
+
+# What does this print?
+print(dog1.tricks)
+
