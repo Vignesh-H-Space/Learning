@@ -5,3 +5,7 @@ class SecretAgent:
 agent = SecretAgent()
 
 agent.__name = "Ethan Hunt"
+
+print(agent._SecretAgent__name)
+print(agent.__name)
+
