@@ -9,3 +9,7 @@ user1.theme = "Dark"
 
 # A global update changes the default theme for everyone
 Settings.theme = "Blue"
+
+# What do these two lines print?
+print(user1.theme)
+print(user2.theme)
