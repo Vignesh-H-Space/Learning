@@ -6,3 +6,8 @@ class Child(Parent):
     def __init__(self):
         Parent.__init__(self)
         self.toys = 10
+kid = Child()
+
+print(hasattr(kid, 'toys'))
+print(hasattr(kid, 'money'))
+print(hasattr(kid, 'age'))
