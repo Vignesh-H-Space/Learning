@@ -10,3 +10,6 @@ c1.count += 1
 # Modifying through the Master Blueprint
 Counter.count += 5
 
+print(c1.count)
+print(c2.count)
+print(Counter.count)
