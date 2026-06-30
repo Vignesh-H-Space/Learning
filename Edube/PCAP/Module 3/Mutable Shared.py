@@ -4,3 +4,9 @@ class Kennel:
 k1 = Kennel()
 k2 = Kennel()
 
+# Modifying the list using the first object
+k1.dogs.append("Rex")
+
+# Reassigning the list using the second object
+k2.dogs = ["Max"]
+
