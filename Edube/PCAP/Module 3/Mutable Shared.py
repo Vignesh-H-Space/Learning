@@ -10,3 +10,6 @@ k1.dogs.append("Rex")
 # Reassigning the list using the second object
 k2.dogs = ["Max"]
 
+print(k1.dogs)
+print(k2.dogs)
+print(Kennel.dogs)
