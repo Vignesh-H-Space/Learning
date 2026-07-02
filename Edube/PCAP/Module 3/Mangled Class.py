@@ -12,3 +12,8 @@ class Child(Parent):
         
         # The child tries to overwrite the private money variable!
         self.__money = 500  
+        
+    def get_child_money(self):
+        return self.__money
+
+kid = Child()
