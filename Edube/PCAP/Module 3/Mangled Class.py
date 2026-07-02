@@ -17,3 +17,8 @@ class Child(Parent):
         return self.__money
 
 kid = Child()
+
+print(kid.get_parent_money())
+print(kid.get_child_money())
+
+
