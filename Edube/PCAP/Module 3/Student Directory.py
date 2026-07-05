@@ -6,7 +6,7 @@ class Student:
         self.name = name
         self.marks = []
         Student.total += 1
-        
+
     def add(self, mark):
         self.marks.append(mark)
 
@@ -17,7 +17,7 @@ class Student:
         print(self.name)
         print(self.marks)
         print(self.average())
-        
+
 s1 = Student("Alice")
 s2 = Student("Bob")
 
@@ -27,3 +27,7 @@ for i in [80, 90, 70]:
 for i in [60, 75]:
     s2.add(i)
 
+s1.display()
+s2.display()
+
+print(Student.total)
