@@ -4,3 +4,6 @@ class Engine:
 
     def start(self):
         self.__status = "Running"
+
+    def get_status(self):
+        return self.__status
