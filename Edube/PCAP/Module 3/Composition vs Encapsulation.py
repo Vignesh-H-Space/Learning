@@ -22,3 +22,6 @@ class Car:
             return self.engine.__status
         except AttributeError:
             return "Access Denied"
+
+my_car = Car()
+my_car.start_car()
