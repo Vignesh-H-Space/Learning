@@ -12,3 +12,6 @@ class Car:
     def __init__(self):
         # The Car HAS an Engine (Composition), not IS an Engine
         self.engine = Engine()
+
+    def start_car(self):
+        self.engine.start()
