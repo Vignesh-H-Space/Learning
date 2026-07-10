@@ -25,3 +25,6 @@ class Car:
 
 my_car = Car()
 my_car.start_car()
+
+print(my_car.engine.get_status())
+print(my_car.inspect_engine())
