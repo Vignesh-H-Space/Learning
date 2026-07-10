@@ -15,3 +15,10 @@ class Car:
 
     def start_car(self):
         self.engine.start()
+
+    def inspect_engine(self):
+        # Trap: Trying to peek at the engine's private variable directly!
+        try:
+            return self.engine.__status
+        except AttributeError:
+            return "Access Denied"
