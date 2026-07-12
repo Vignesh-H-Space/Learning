@@ -17,3 +17,5 @@ tracker = DataTracker()
 tracker.add_via_class(10)
 tracker.add_via_static(20)
 DataTracker.add_via_class(30)
+
+print(len(DataTracker.entries))
