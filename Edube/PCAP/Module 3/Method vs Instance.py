@@ -5,4 +5,6 @@ class Factory:
     def produce(cls, item):
         cls.items.append(item)
 
+    def mask_items(self):
+        self.items = ["Fake Item"]
 
