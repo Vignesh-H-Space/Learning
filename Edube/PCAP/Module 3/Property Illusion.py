@@ -12,3 +12,12 @@ class Thermostat:
             self._temp = 0
         else:
             self._temp = value
+            
+            
+ac = Thermostat()
+
+ac.temp = -10
+
+ac._temp = -5
+
+print(ac.temp)
