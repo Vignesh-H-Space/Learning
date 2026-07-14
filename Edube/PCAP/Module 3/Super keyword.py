@@ -17,3 +17,6 @@ class D(B, C):
     def ping(self):
         return "D -> " + super().ping()
 
+d = D()
+
+print(d.ping())
