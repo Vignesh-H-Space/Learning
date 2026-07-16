@@ -13,3 +13,6 @@ class Countdown:
         return self.start
 
 timer = Countdown(3)
+
+for num in timer:
+    print(num)
