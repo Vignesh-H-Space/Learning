@@ -8,3 +8,8 @@ class Countdown:
     def __next__(self):
         if self.start <= 0:
             raise StopIteration  
+
+        self.start -= 1
+        return self.start
+
+timer = Countdown(3)
