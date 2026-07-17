@@ -6,3 +6,7 @@ class Dog:
 
 class Cat:
     def purr(self): return "Meow"
+
+animals = [Duck(), Dog(), Cat()]
+sounds = []
+
