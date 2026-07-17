@@ -10,3 +10,10 @@ class Cat:
 animals = [Duck(), Dog(), Cat()]
 sounds = []
 
+for animal in animals:
+    try:
+        sounds.append(animal.speak())
+    except AttributeError:
+        sounds.append("Silent")
+
+print(sounds)
