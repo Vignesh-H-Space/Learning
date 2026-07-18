@@ -6,3 +6,10 @@ class Point:
         self.y = y
 
 p = Point(10, 20)
+
+try:
+    p.z = 30
+    print("Successfully Added Z!")
+    
+except AttributeError:
+    print("Caught an AttributeError!")
