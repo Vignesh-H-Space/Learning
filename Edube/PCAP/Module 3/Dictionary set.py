@@ -8,3 +8,9 @@ class Coin:
     def __hash__(self):
         return hash(self.value)
 
+c1 = Coin(25)
+c2 = Coin(25)
+
+pocket = {c1, c2}
+
+print(len(pocket))
