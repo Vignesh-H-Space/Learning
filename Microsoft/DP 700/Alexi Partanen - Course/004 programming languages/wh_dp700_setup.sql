@@ -40,3 +40,25 @@ VALUES
     (103, 'IT', 'Sophia Black', 'Seattle'),
     (104, 'Marketing', 'David Blue', 'Chicago');
 GO
+
+
+
+-- Create the projects table
+CREATE TABLE dp700_e004.projects (
+    project_id INT,
+    project_name VARCHAR(50),
+    department_id INT,
+    budget DECIMAL(12, 2),
+    start_date DATE
+);
+GO
+
+-- Insert data into projects table
+INSERT INTO dp700_e004.projects (project_id, project_name, department_id, budget, start_date)
+VALUES
+    (201, 'Product Launch', 101, 150000.00, '2023-01-01'),
+    (202, 'System Upgrade', 103, 200000.00, '2022-05-15'),
+    (203, 'New Branch Setup', 102, 250000.00, '2023-03-01'),
+    (204, 'Digital Marketing Campaign', 104, 120000.00, '2022-08-01');
+GO
+
