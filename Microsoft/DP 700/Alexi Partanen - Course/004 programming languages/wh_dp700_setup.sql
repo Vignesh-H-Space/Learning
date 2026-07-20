@@ -62,3 +62,23 @@ VALUES
     (204, 'Digital Marketing Campaign', 104, 120000.00, '2022-08-01');
 GO
 
+-- Create the assignments table to track employee-project relationships
+CREATE TABLE dp700_e004.assignments (
+    assignment_id INT,
+    employee_id INT,
+    project_id INT,
+    assigned_date DATE,
+    role VARCHAR(50)
+);
+GO
+
+-- Insert data into assignments table
+INSERT INTO dp700_e004.assignments (assignment_id, employee_id, project_id, assigned_date, role)
+VALUES
+    (1, 1, 201, '2023-02-01', 'Team Lead'),
+    (2, 3, 202, '2022-06-01', 'Developer'),
+    (3, 2, 203, '2023-04-01', 'Project Manager'),
+    (4, 5, 203, '2023-04-15', 'Analyst'),
+    (5, 4, 201, '2023-02-10', 'Sales Rep'),
+    (6, 6, 202, '2022-07-01', 'Support Engineer');
+GO
