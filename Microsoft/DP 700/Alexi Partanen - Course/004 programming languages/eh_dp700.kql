@@ -1,0 +1,19 @@
+assignments
+
+departments
+
+employees
+
+projects
+
+employees
+| where salary >= 75000
+| project name, salary, salary_string = strcat("$ ", salary)
+
+employees
+| join kind=leftouter departments on department_id
+| project name, department_id, department_name
+
+employees
+| join kind=leftouter departments on department_id
+| summarize number_of_employees = count() by department_name
