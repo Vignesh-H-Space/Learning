@@ -25,3 +25,17 @@ e.name
 from dp700_e004.employees as e
 left join dp700_e004.departments as d
 on e.department_id = d.department_id
+
+select
+a.department_name
+,count(*) as number_of_employees
+from (
+    select
+    e.name
+    ,e.department_id
+    ,d.department_name
+    from dp700_e004.employees as e
+    left join dp700_e004.departments as d
+    on e.department_id = d.department_id
+) as a
+group by department_name;
