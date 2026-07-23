@@ -78,3 +78,11 @@ try:
         
         # Wait for a bit before sending the next reading
         time.sleep(SLEEP_TIME)
+
+except KeyboardInterrupt:
+    print("Stopped by the user")
+except Exception as e:
+    print(f"Error: {e}")
+finally:
+    # Close the producer
+    producer.close()
