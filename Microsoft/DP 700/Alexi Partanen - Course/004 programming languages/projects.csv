@@ -1,0 +1,5 @@
+project_id,project_name,department_id,budget,start_date
+201,Product Launch,101,150000.00,2023-01-01
+202,System Upgrade,103,200000.00,2022-05-15
+203,New Branch Setup,102,250000.00,2023-03-01
+204,Digital Marketing Campaign,104,120000.00,2022-08-01
