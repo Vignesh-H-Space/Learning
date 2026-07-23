@@ -10,9 +10,8 @@ import time
 import json
 
 # Replace the placeholders with your Event Hubs connection string and event hub name
-EVENTHUB_NAME = 'esehpnhxzayrvu14rciul9_eh'
-CONNECTION_STR = 'Endpoint=sb://esehpnhxzayrvu14rciul9.servicebus.windows.net/;SharedAccessKeyName=key_32b6eb82-9b23-444b-aaad-7237aedcf71f;SharedAccessKey=KkpUeaWS4FphQyP/REmzoDpZ2XYsOIab3+AEhMsqG00=;EntityPath=esehpnhxzayrvu14rciul9_eh'
-
+EVENTHUB_NAME = 'Redacted'
+CONNECTION_STR = 'Redacted'
 
 # Configuration variables
 MIN_TEMPERATURE = 19.0          # Minimum temperature value
@@ -34,3 +33,48 @@ def get_random_sensor_readings(min_temp, max_temp):
     selected_sensors = random.sample(sensors, random.randint(1, len(sensors)))
     return [{"sensor": sensor, "temperature": generate_fake_temperature(min_temp, max_temp)}
             for sensor in selected_sensors]
+    
+def generate_event_id(payload):
+    """Generate a SHA256 hash as a unique event ID."""
+    hash_object = hashlib.sha256(json.dumps(payload, sort_keys=True).encode('utf-8'))
+    return hash_object.hexdigest()
+
+def get_current_timestamp():
+    """Return the current timestamp in ISO 8601 format."""
+    return datetime.now(timezone.utc).isoformat()
+
+
+try:
+    # Continuously generate and send fake temperature readings
+    while True:
+        # Create a batch.
+        event_data_batch = producer.create_batch()
+        
+        # Generate random sensor readings
+        temperature_readings = get_random_sensor_readings(MIN_TEMPERATURE, MAX_TEMPERATURE)
+        
+        # Create the payload
+        payload = {
+            "country": COUNTRY,
+            "city": CITY,
+            "timestamp": get_current_timestamp(),
+            "temperature_readings": temperature_readings
+        }
+        
+        # Generate an event_id
+        payload["event_id"] = generate_event_id(payload)
+        
+        # Format the message as JSON
+        message = json.dumps(payload)
+
+        # Add the JSON-formatted message to the batch
+        event_data_batch.add(EventData(message))
+        
+        # Send the batch of events to the event hub
+        producer.send_batch(event_data_batch)
+        
+        print(json.dumps(json.loads(message), indent=4))
+        print(event_data_batch)
+        
+        # Wait for a bit before sending the next reading
+        time.sleep(SLEEP_TIME)
